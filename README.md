@@ -1,10 +1,12 @@
 # Landing page personal — Lautaro Altamiranda Mastri
 
 El link que va en la bio de Instagram. Una sola página, sin framework, sin build, sin
-dependencias: **todo vive en `index.html`** (texto, estilos y el poco JavaScript que hay).
+dependencias: **todo el sitio vive en `index.html`** (texto, estilos y el poco JavaScript
+que hay), y las fotos en `assets/`.
 
 ```
 index.html     ← la página entera. Es el único archivo que vas a tocar.
+assets/        ← las fotos, ya recortadas y comprimidas para web
 og.png         ← la imagen que se ve cuando compartís el link (1200×630)
 favicon.svg    ← el iconito de la pestaña
 README.md      ← esto
@@ -38,18 +40,31 @@ entre las etiquetas**, sin tocar los `<p>`, `<h2>` ni las comillas.
 
 | Buscá este cartel en el archivo | Qué controla |
 |---|---|
-| `1 · HERO` | Tu nombre, la frase grande, la bajada y el botón «Escribime» |
-| `2 · SOBRE MÍ` | El párrafo que explica por qué los cuatro temas son uno solo |
-| `3 · LOS CUATRO TERRENOS` | Las cuatro tarjetas (negocios, IA, literatura, fe) |
-| `4 · PROYECTOS` | CosteAR, la agencia y la carrera |
-| `5 · SOBRE QUÉ PUBLICO` | Los tres pilares y el link a Instagram |
-| `6 · CONTACTO` | WhatsApp, correo y LinkedIn |
+| `1 · HERO` | Tu nombre, la frase grande, tu retrato y los dos botones |
+| `2 · QUIÉN SOY` | Los tres párrafos que cuentan quién sos |
+| `3 · TIRA DE FOTOS` | Las seis fotos y sus epígrafes |
+| `4 · EN QUÉ ANDO` | Costear, Mareterra y la carrera |
+| `5 · CÓMO PIENSO` | Las tres ideas numeradas |
+| `6 · CONTACTO` | WhatsApp, correo, Instagram y LinkedIn |
+
+### La lista que se escribe sola
+
+Debajo de la frase grande hay una línea que se escribe letra por letra y va
+cambiando: *En la parroquia → En la oficina → En la facultad → En la cancha*.
+Son cuatro, los cuatro lugares que promete la bajada de arriba. Las frases **no
+están en el HTML**: están al final del archivo, en el script, en una lista que
+dice `var FRASES = [`. Editá esa lista y listo. La última frase es la que queda
+fija cuando termina la vuelta —hoy, «En la cancha»—.
+
+Si cambiás las frases, cambiá también el párrafo `sr-only` que está justo debajo
+del `<p class="typer">` en el HTML: es el que leen los lectores de pantalla y el
+que se ve si el visitante tiene JavaScript apagado.
 
 **Ejemplo.** Si querés cambiar la bajada del hero, buscá `class="hero__lead"` y cambiá lo que
 está entre `>` y `</p>`:
 
 ```html
-<p class="hero__lead">Cofundador de CosteAR, un software de costos con IA para PyMEs. …</p>
+<p class="hero__lead">Cofundador de Costear, un software de costos con IA para PyMEs. …</p>
                       └──────────────── esto es lo que se edita ────────────────┘
 ```
 
@@ -71,14 +86,43 @@ resumen al principio del archivo para que sepas cuáles son sin buscar:
   pantalla. Si cambiás el correo, cambialo en los tres lugares.
 - **LinkedIn** e **Instagram** — la URL completa del perfil.
 
-### Poner tu foto
+### Cambiar una foto
 
-1. Guardá el retrato en esta carpeta con el nombre **`retrato.jpg`** (vertical, tipo 800×1000).
-2. En `index.html`, buscá `HUECO PARA LA FOTO` y **borrá las dos líneas de comentario** que
-   envuelven el bloque `<figure>`: la que dice `-->` y la que abre con `<!--`.
+Todas las fotos viven en `assets/` y cada una está **dos veces**: un `.webp` (el que
+usa el navegador) y un `.jpg` (el respaldo). Para cambiar una, reemplazá **las dos**
+manteniendo el nombre:
 
-El diseño se reacomoda solo: en el teléfono la foto va arriba del texto y en pantalla grande
-el hero pasa a dos columnas. No hay que tocar nada más.
+| Archivo | Qué es | Recorte |
+|---|---|---|
+| `retrato` | El retrato del hero | Vertical 2:3 (408×612) |
+| `parroquia` | El grupo de la parroquia | Vertical 3:4 (440×587) |
+| `costear-equipo` | Vos con dos socios de Costear | Vertical 3:4 (440×587) |
+| `emprende-u` | Presentando, con el sistema proyectado | Vertical 3:4 (440×587) |
+| `expocon` | El stand de EXPOCON, con tus viejos | Vertical 3:4 (440×587) |
+| `mareterra-playa` | Con la remera de la agencia, en la playa | Vertical 3:4 (440×587) |
+| `mareterra-atardecer` | De espaldas, filmando el atardecer | Vertical 3:4 (440×587) |
+| `costear-gaceta` | El recorte del diario, dentro del bloque de Costear | Apaisado (880×239) |
+
+Después, en `index.html`, actualizá el **`alt`** y el **`<figcaption>`** de esa foto para
+que digan lo que se ve. El `alt` es lo que lee alguien que no puede ver la imagen: escribí
+qué pasa en la foto, no «foto 3».
+
+> **Sacales los metadatos.** Una foto sacada con el teléfono viaja con la fecha, el modelo del
+> aparato y, muy seguido, las **coordenadas GPS exactas** de dónde se tomó. Publicada tal cual,
+> eso queda a disposición de cualquiera que se baje el archivo. Las que están ahora se subieron
+> limpias; si agregás una, limpiala antes (la mayoría de los editores tiene «exportar sin datos
+> de ubicación»).
+
+> Las fotos originales del teléfono pesan más de 1 MB y muchas son `.heic`, que el navegador
+> no sabe mostrar. Antes de subir una hay que recortarla al aspecto de la tabla y bajarla a
+> unos 440 px de ancho. Si no tenés a mano con qué, cualquier editor de fotos sirve; lo
+> importante es el aspecto y que el archivo quede por debajo de ~80 KB.
+
+**Cuidado con quién más sale en la foto.** Varias de las que están ahora tienen gente
+además de vos: el grupo de la parroquia, los socios de Costear, tus viejos en el stand.
+Fue una decisión tomada a propósito, pero conviene tenerla presente — ninguna de esas
+personas eligió aparecer en el link de tu bio, y la página la puede abrir cualquiera. Si
+alguna te pide salir, es cambiar dos archivos y dos líneas.
 
 ---
 

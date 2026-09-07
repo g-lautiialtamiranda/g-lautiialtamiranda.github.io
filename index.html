@@ -16,10 +16,10 @@
 -->
 
 <title>Lautaro Altamiranda Mastri — Hacer visible lo que vale</title>
-<meta name="description" content="Cofundador de CosteAR, software de costos con IA para PyMEs. Negocios, tecnología, literatura y fe: una sola operación en cuatro terrenos. Tucumán, Argentina.">
+<meta name="description" content="Tengo 19 años y hago demasiadas cosas a la vez: vendo viajes en Mareterra, construyo Costear —un software de costos con IA— y estudio Administración. En el medio leo, toco la guitarra y voy a misa. Tucumán, Argentina.">
 <meta name="author" content="Lautaro Altamiranda Mastri">
-<meta name="theme-color" content="#F7F4EE" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#14120F" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FDF8F0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#171310" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="./">
 
 <!--
@@ -34,7 +34,7 @@
 <meta property="og:locale" content="es_AR">
 <meta property="og:site_name" content="Lautaro Altamiranda Mastri">
 <meta property="og:title" content="Lautaro Altamiranda Mastri — Hacer visible lo que vale">
-<meta property="og:description" content="Cofundador de CosteAR, software de costos con IA para PyMEs. Negocios, tecnología, literatura y fe: una sola operación en cuatro terrenos.">
+<meta property="og:description" content="Tengo 19 años y hago demasiadas cosas a la vez. Vendo viajes, construyo software de costos con IA y estudio. En el medio leo, toco la guitarra y voy a misa.">
 <meta property="og:url" content="./">
 <meta property="og:image" content="og.png">
 <meta property="og:image:width" content="1200">
@@ -42,48 +42,55 @@
 <meta property="og:image:alt" content="Lautaro Altamiranda Mastri — Hacer visible lo que vale, antes de que el otro pueda verlo.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Lautaro Altamiranda Mastri — Hacer visible lo que vale">
-<meta name="twitter:description" content="Cofundador de CosteAR, software de costos con IA para PyMEs. Negocios, tecnología, literatura y fe: una sola operación en cuatro terrenos.">
+<meta name="twitter:description" content="Tengo 19 años y hago demasiadas cosas a la vez. Vendo viajes, construyo software de costos con IA y estudio.">
 <meta name="twitter:image" content="og.png">
 
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
 
 <script>document.documentElement.classList.add('js');</script>
 
 <style>
-/* ══════════════════ 1. TOKENS DE COLOR Y TIPOGRAFÍA ══════════════════ */
+/* ══════════════════ 1. TOKENS DE COLOR Y TIPOGRAFÍA ══════════════════
+   La paleta es "solar": crema de papel, tinta cálida, naranja de atardecer
+   y un amarillo que se usa SOLO como relleno o subrayado — nunca como color
+   de texto sobre el crema, porque no llega al contraste mínimo. */
 :root{
-  --bg:#F7F4EE;
-  --surface:#FDFBF6;
-  --line:#E3DCD0;
-  --text:#1A1815;
-  --muted:#5A5349;
-  --accent:#B4532A;        /* filetes y rellenos */
-  --accent-text:#A0461F;   /* texto y enlaces: más oscuro, para contraste AA */
-  --on-accent:#FFF9F0;
-  --shadow:0 1px 2px rgba(26,24,21,.04), 0 8px 24px -12px rgba(26,24,21,.14);
+  --bg:#FDF8F0;
+  --surface:#FFFDF8;
+  --line:#EADFCC;
+  --text:#1A1613;
+  --muted:#5C5347;
+  --accent:#E2622A;        /* filetes, rellenos y bordes */
+  --accent-text:#B34A1B;   /* texto y enlaces: más oscuro, para contraste AA */
+  --yellow:#F5B93E;        /* decorativo: subrayados y el cursor. Nunca texto. */
+  --teal:#2B6F73;
+  --on-accent:#FFF8EE;
+  --shadow:0 1px 2px rgba(26,22,19,.05), 0 12px 32px -14px rgba(120,60,20,.28);
 
-  --serif:"Fraunces",Georgia,"Times New Roman",serif;
-  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --sans:"Instrument Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 
-  --maxw:68rem;
+  --maxw:72rem;
   --pad:clamp(1.25rem,5vw,3rem);
-  --section-y:clamp(4rem,11vw,8rem);
+  --section-y:clamp(4rem,11vw,7.5rem);
 }
 @media (prefers-color-scheme:dark){
   :root{
-    --bg:#14120F;
-    --surface:#1D1A16;
-    --line:#332C25;
-    --text:#F2EDE4;
-    --muted:#A9A093;
-    --accent:#E2825A;
-    --accent-text:#E2825A;
-    --on-accent:#14120F;
-    --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.6);
+    --bg:#171310;
+    --surface:#211B16;
+    --line:#3A2F26;
+    --text:#F5EEE3;
+    --muted:#B0A395;
+    --accent:#F0834E;
+    --accent-text:#F0834E;
+    --yellow:#F5B93E;
+    --teal:#5FB2B5;
+    --on-accent:#171310;
+    --shadow:0 1px 2px rgba(0,0,0,.35), 0 12px 32px -14px rgba(0,0,0,.7);
   }
 }
 
@@ -96,16 +103,16 @@ body{
   color:var(--text);
   font-family:var(--sans);
   font-size:1.0625rem;
-  line-height:1.65;
+  line-height:1.68;
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
 }
 @media (min-width:48rem){ body{font-size:1.125rem} }
 img{max-width:100%;height:auto;display:block}
-h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.1;letter-spacing:-.015em;margin:0}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spacing:-.01em;margin:0}
 p{margin:0}
 a{color:var(--accent-text)}
-:focus-visible{outline:2px solid var(--accent-text);outline-offset:3px;border-radius:2px}
+:focus-visible{outline:2px solid var(--accent-text);outline-offset:3px;border-radius:3px}
 
 .skip{
   position:absolute;left:.5rem;top:-4rem;z-index:99;
@@ -114,150 +121,225 @@ a{color:var(--accent-text)}
   transition:top .18s ease;
 }
 .skip:focus{top:.5rem}
+.sr-only{
+  position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;
+}
 
 .shell{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)}
 .section{padding-block:var(--section-y);border-top:1px solid var(--line)}
 .eyebrow{
-  font-family:var(--sans);font-size:.75rem;font-weight:500;
-  letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:0 0 1rem;
+  font-family:var(--sans);font-size:.75rem;font-weight:600;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--accent-text);
+  margin:0 0 1rem;display:flex;align-items:center;gap:.65rem;
 }
-.section__title{font-size:clamp(1.6rem,5.5vw,2.5rem);max-width:20ch;text-wrap:balance}
+.eyebrow::after{content:"";flex:0 0 2.25rem;height:2px;background:var(--accent);opacity:.55}
+.section__title{font-size:clamp(2rem,6.4vw,3.4rem);max-width:18ch;text-wrap:balance}
+
+/* Subrayado amarillo hecho a mano: va DETRÁS del texto, así el texto conserva
+   su propio contraste y el amarillo queda como marcador. */
+.mark{
+  background:linear-gradient(to top, color-mix(in srgb, var(--yellow) 62%, transparent) 0 .9em, transparent .9em);
+  padding-inline:.12em;
+  box-decoration-break:clone;-webkit-box-decoration-break:clone;
+}
 
 /* ══════════════════ 3. HERO ══════════════════ */
 .hero{
   position:relative;
-  min-height:100svh;
   display:flex;align-items:center;
-  padding-block:clamp(5rem,14vh,8rem) clamp(3.5rem,10vh,6rem);
+  padding-block:clamp(3rem,9vh,5.5rem) clamp(3.5rem,10vh,6rem);
   overflow:hidden;
 }
-/* EL GESTO: un resplandor cálido que deriva muy lento detrás del titular.
-   Es la única animación decorativa de toda la página. */
+/* Un resplandor cálido que deriva muy lento detrás del titular. */
 .hero::before{
   content:"";position:absolute;inset:-30% -20%;z-index:0;pointer-events:none;
   background:
-    radial-gradient(38rem 30rem at 22% 28%, color-mix(in srgb, var(--accent) 20%, transparent), transparent 70%),
-    radial-gradient(30rem 26rem at 82% 74%, color-mix(in srgb, var(--accent) 12%, transparent), transparent 70%);
-  filter:blur(10px);
-  animation:drift 34s ease-in-out infinite alternate;
+    radial-gradient(40rem 32rem at 18% 22%, color-mix(in srgb, var(--accent) 26%, transparent), transparent 70%),
+    radial-gradient(34rem 28rem at 84% 78%, color-mix(in srgb, var(--yellow) 30%, transparent), transparent 70%);
+  filter:blur(14px);
+  animation:drift 32s ease-in-out infinite alternate;
 }
 @keyframes drift{
   from{transform:translate3d(-3%,-2%,0) scale(1)}
-  to  {transform:translate3d(4%,3%,0) scale(1.12)}
+  to  {transform:translate3d(4%,3%,0) scale(1.14)}
 }
 .hero__inner{position:relative;z-index:1;width:100%}
 .hero__name{
-  font-family:var(--sans);font-size:.8rem;font-weight:500;
-  letter-spacing:.22em;text-transform:uppercase;color:var(--muted);
-  margin:0 0 1.25rem;
+  font-family:var(--sans);font-size:.76rem;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--muted);
+  margin:0 0 1.5rem;
 }
-.hero__rule{width:3.5rem;height:2px;background:var(--accent);border:0;margin:0 0 1.75rem}
 .hero h1{
-  font-size:clamp(2.35rem,8.8vw,5.25rem);
-  line-height:1.03;letter-spacing:-.028em;
-  max-width:16ch;text-wrap:balance;
-  margin:0 0 clamp(1.5rem,4vw,2.25rem);
+  font-size:clamp(2.6rem,10vw,6rem);
+  line-height:.99;letter-spacing:-.02em;
+  max-width:15ch;text-wrap:balance;
+  margin:0 0 clamp(1.5rem,4vw,2rem);
 }
+.hero h1 em{font-style:italic;color:var(--accent-text)}
 .hero__lead{
-  font-size:clamp(1.02rem,3.4vw,1.3rem);
-  line-height:1.55;color:var(--muted);max-width:44ch;
-  margin:0 0 clamp(2rem,5vw,2.75rem);
+  font-size:clamp(1.05rem,3.4vw,1.3rem);
+  color:var(--muted);max-width:40ch;margin:0 0 .9rem;
 }
+
+/* ── LA MÁQUINA DE ESCRIBIR ─────────────────────────────────────────
+   El texto lo escribe el script del final. La altura está fijada para que
+   la página no salte cada vez que cambia la frase. */
+.typer{
+  font-family:var(--sans);font-weight:600;
+  font-size:clamp(1.15rem,4.4vw,1.6rem);
+  color:var(--text);line-height:1.35;
+  min-height:2.7em;margin:0 0 clamp(2rem,5vw,2.5rem);
+  display:flex;align-items:flex-start;
+}
+.typer__caret{
+  display:inline-block;width:.09em;height:1.05em;margin-left:.09em;
+  background:var(--accent);vertical-align:-.14em;flex:none;
+  animation:blink 1.05s steps(1) infinite;
+}
+@keyframes blink{50%{opacity:0}}
+
 .hero__cta{display:flex;flex-wrap:wrap;align-items:center;gap:.85rem 1.5rem}
 
-/* ── HUECO PARA LA FOTO ──────────────────────────────────────────────
-   Cuando tengas el retrato, guardalo como  retrato.jpg  en esta carpeta
-   y descomentá el bloque <figure> del HTML (buscá "HUECO PARA LA FOTO").
-   Estas reglas ya lo acomodan solas: en teléfono va arriba del texto y en
-   pantalla grande el hero pasa a dos columnas. No hay que tocar nada más. */
-.hero__portrait{margin:0 0 2.5rem;max-width:15rem}
+/* ── EL RETRATO ──────────────────────────────────────────────────────
+   Para cambiar la foto: reemplazá assets/retrato.jpg y assets/retrato.webp
+   por otras dos del mismo tamaño (408×612) y listo. */
+.hero__portrait{margin:0 0 2.25rem;width:min(46vw,11rem)}
 .hero__portrait img{
-  aspect-ratio:4/5;object-fit:cover;width:100%;
-  border-radius:.6rem;border:1px solid var(--line);box-shadow:var(--shadow);
+  width:100%;border-radius:.7rem;
+  border:3px solid var(--surface);box-shadow:var(--shadow);
+  transform:rotate(-2.5deg);
+  transition:transform .35s cubic-bezier(.22,.61,.36,1);
 }
-@media (min-width:60rem){
-  .hero__inner:has(.hero__portrait){
-    display:grid;grid-template-columns:1fr minmax(0,20rem);
-    gap:clamp(2rem,6vw,5rem);align-items:center;
+.hero__portrait:hover img{transform:rotate(0deg) scale(1.02)}
+@media (min-width:62rem){
+  .hero{min-height:100svh}
+  /* Dos columnas: el texto a la izquierda y el retrato a la derecha. En
+     teléfono no hace falta ninguna regla — el orden del HTML ya es el bueno. */
+  .hero__inner{
+    display:grid;grid-template-columns:1fr minmax(0,17rem);
+    gap:clamp(2rem,6vw,4.5rem);align-items:center;
   }
-  .hero__inner:has(.hero__portrait) > *{grid-column:1}
-  .hero__inner .hero__portrait{grid-column:2;grid-row:1 / span 5;margin:0;max-width:none;align-self:center}
+  .hero__portrait{order:2;margin:0;width:100%}
+  .hero__text{order:1;min-width:0}
 }
 
 /* ══════════════════ 4. BOTONES Y ENLACES ══════════════════ */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
-  font-family:var(--sans);font-size:1rem;font-weight:500;line-height:1;
-  padding:.95rem 1.6rem;border-radius:999px;border:1px solid transparent;
+  font-family:var(--sans);font-size:1rem;font-weight:600;line-height:1;
+  padding:1rem 1.7rem;border-radius:999px;border:1px solid transparent;
   text-decoration:none;cursor:pointer;
-  transition:transform .18s ease, background-color .18s ease, border-color .18s ease, color .18s ease;
+  transition:transform .18s ease, background-color .18s ease, border-color .18s ease, color .18s ease, box-shadow .18s ease;
 }
+/* Los dos botones de cada par son idénticos a propósito: ninguna de las dos
+   formas de escribirme vale más que la otra. Si algún día querés que uno pese
+   más que el otro, esto es lo único que hay que volver a partir en dos. */
 .btn--primary{background:var(--accent-text);color:var(--on-accent);box-shadow:var(--shadow)}
-.btn--primary:hover{transform:translateY(-2px);background:var(--accent)}
-.btn--ghost{border-color:var(--line);color:var(--text);background:transparent}
-.btn--ghost:hover{transform:translateY(-2px);border-color:var(--accent);color:var(--accent-text)}
+.btn--primary:hover{transform:translateY(-3px) rotate(-1deg);background:var(--accent)}
 .btn--wide{width:100%}
 @media (min-width:30rem){ .btn--wide{width:auto} }
 
 .textlink{
-  font-family:var(--sans);font-size:1rem;font-weight:500;color:var(--accent-text);
-  text-decoration:none;border-bottom:1px solid color-mix(in srgb, var(--accent) 45%, transparent);
-  padding-bottom:.15rem;transition:border-color .18s ease, opacity .18s ease;
+  font-family:var(--sans);font-size:1rem;font-weight:600;color:var(--accent-text);
+  text-decoration:none;border-bottom:2px solid color-mix(in srgb, var(--yellow) 85%, transparent);
+  padding-bottom:.12rem;transition:border-color .18s ease, opacity .18s ease;
 }
-.textlink:hover{border-color:var(--accent);opacity:.82}
+.textlink:hover{border-color:var(--accent);opacity:.85}
 
-/* ══════════════════ 5. SOBRE MÍ ══════════════════ */
-.about__body{margin-top:1.75rem;display:grid;gap:1.25rem;max-width:56ch}
-.about__body p{font-size:clamp(1.05rem,3.2vw,1.2rem);line-height:1.7}
-.about__kicker{font-family:var(--serif);font-size:clamp(1.15rem,3.6vw,1.4rem);line-height:1.5}
-
-/* ══════════════════ 6. LOS CUATRO TERRENOS ══════════════════ */
-.grounds{margin-top:2.5rem;display:grid;gap:1rem;list-style:none;padding:0}
-@media (min-width:40rem){ .grounds{grid-template-columns:1fr 1fr;gap:1.25rem} }
-.ground{
-  background:var(--surface);border:1px solid var(--line);border-radius:.85rem;
-  padding:clamp(1.5rem,4vw,2rem);
-  transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+/* ══════════════════ 5. QUIÉN SOY ══════════════════ */
+.about__body{margin-top:2rem;display:grid;gap:1.35rem;max-width:56ch}
+.about__body p{font-size:clamp(1.05rem,3.2vw,1.2rem)}
+/* El selector lleva .about__body adelante a propósito: si no, la regla de
+   arriba le gana por especificidad y el remate queda del tamaño del cuerpo. */
+.about__body .about__kicker{
+  font-family:var(--serif);font-size:clamp(1.5rem,5vw,2.15rem);
+  line-height:1.24;color:var(--text);margin-top:.5rem;
 }
-.ground:hover{transform:translateY(-3px);border-color:color-mix(in srgb, var(--accent) 45%, var(--line));box-shadow:var(--shadow)}
-.ground__num{
-  font-family:var(--serif);font-size:.9rem;color:var(--accent-text);
-  letter-spacing:.06em;display:block;margin-bottom:.9rem;
-}
-.ground__name{font-size:clamp(1.3rem,4vw,1.6rem);margin-bottom:.6rem}
-.ground__what{color:var(--muted);font-size:1rem;line-height:1.6}
 
-/* ══════════════════ 7. PROYECTOS ══════════════════ */
-.project{margin-top:2.5rem}
-.project__head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem 1rem;margin-bottom:1.1rem}
-.project__name{font-size:clamp(1.5rem,5vw,2.1rem)}
+/* ══════════════════ 6. TIRA DE FOTOS ══════════════════
+   En teléfono se desliza de costado; en pantalla grande entra toda. */
+.strip{
+  margin-top:2.5rem;padding:0;list-style:none;
+  display:grid;grid-auto-flow:column;grid-auto-columns:minmax(9.5rem,1fr);
+  gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding-bottom:1rem;
+  scrollbar-width:thin;
+}
+.strip > li{scroll-snap-align:start}
+@media (min-width:62rem){
+  .strip{grid-auto-columns:1fr;overflow:visible;gap:1.25rem}
+}
+.shot{margin:0}
+.shot img{
+  width:100%;aspect-ratio:3/4;object-fit:cover;
+  border-radius:.6rem;border:3px solid var(--surface);box-shadow:var(--shadow);
+  transition:transform .35s cubic-bezier(.22,.61,.36,1);
+}
+/* La inclinación alterna foto por foto. Va contada sobre el <li>, no sobre el
+   <figure>: el <figure> es siempre hijo único de su <li>, así que contarlo a él
+   daba «impar» siempre y las seis se inclinaban para el mismo lado. */
+.strip > li:nth-child(odd) .shot img{transform:rotate(-1.6deg)}
+.strip > li:nth-child(even) .shot img{transform:rotate(1.6deg)}
+.strip > li .shot:hover img{transform:rotate(0deg) scale(1.045)}
+.shot figcaption{
+  margin-top:.7rem;font-size:.8rem;color:var(--muted);
+  letter-spacing:.02em;
+}
+
+/* ══════════════════ 7. CÓMO PIENSO ══════════════════ */
+.ideas{margin-top:3rem;display:grid;gap:1.25rem;list-style:none;padding:0}
+@media (min-width:62rem){ .ideas{grid-template-columns:repeat(3,1fr);gap:1.5rem} }
+.idea{
+  background:var(--surface);border:1px solid var(--line);border-radius:1rem;
+  padding:clamp(1.6rem,4vw,2.1rem);
+  transition:border-color .25s ease, box-shadow .25s ease;
+  transform-style:preserve-3d;
+  will-change:transform;
+}
+.idea:hover{border-color:color-mix(in srgb, var(--accent) 50%, var(--line));box-shadow:var(--shadow)}
+.idea__num{
+  font-family:var(--serif);font-size:2.6rem;line-height:1;
+  color:var(--accent);display:block;margin-bottom:.75rem;
+}
+.idea__name{font-size:clamp(1.35rem,4.2vw,1.7rem);margin-bottom:.9rem;line-height:1.15}
+.idea__what{color:var(--muted);font-size:1rem;line-height:1.65}
+.idea__what em{font-style:italic;color:var(--text)}
+
+/* ══════════════════ 8. EN QUÉ ANDO ══════════════════ */
+.project{margin-top:2.75rem}
+.project__head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem 1rem;margin-bottom:1.2rem}
+.project__name{font-size:clamp(1.8rem,6vw,2.6rem)}
 .project__role{
-  font-family:var(--sans);font-size:.78rem;font-weight:500;letter-spacing:.14em;
+  font-family:var(--sans);font-size:.76rem;font-weight:600;letter-spacing:.14em;
   text-transform:uppercase;color:var(--muted);
 }
 .project__body{display:grid;gap:1rem;max-width:60ch}
 .project__body p{color:var(--muted)}
 .project__body p:first-child{color:var(--text)}
-.project--minor{
+/* Los tres proyectos pesan igual. Esto es solo la línea que los separa. */
+.project--next{
   margin-top:clamp(2.5rem,7vw,4rem);padding-top:clamp(2.5rem,7vw,4rem);
   border-top:1px solid var(--line);
 }
-.study{
-  margin-top:clamp(2rem,5vw,3rem);padding-top:clamp(2rem,5vw,3rem);
-  border-top:1px solid var(--line);color:var(--muted);
-}
-.study strong{color:var(--text);font-weight:500}
 
-/* ══════════════════ 8. PILARES ══════════════════ */
-.pillars{margin-top:2.5rem;display:grid;gap:1.5rem;list-style:none;padding:0}
-@media (min-width:52rem){ .pillars{grid-template-columns:repeat(3,1fr);gap:2rem} }
-.pillar{border-top:2px solid var(--accent);padding-top:1.1rem}
-.pillar__name{font-size:clamp(1.2rem,3.6vw,1.45rem);margin-bottom:.5rem}
-.pillar__what{color:var(--muted);font-size:1rem;line-height:1.6}
-.pillars__after{margin-top:clamp(2rem,5vw,2.75rem)}
+/* El recorte del diario. Es una captura de TEXTO, no una foto: si se encoge al
+   ancho de un teléfono la letra queda en 8 px y no se lee justo donde más se
+   mira la página. Por eso abajo de 600 px no se achica: se desliza de costado
+   dentro de su propia caja, igual que la tira de fotos. */
+.press{
+  margin:1.75rem 0 0;max-width:60ch;
+  overflow-x:auto;scrollbar-width:thin;
+  -webkit-overflow-scrolling:touch;
+}
+.press img{
+  width:100%;min-width:600px;height:auto;display:block;
+  border-radius:.5rem;border:1px solid var(--line);background:#fff;
+}
+.press figcaption{margin-top:.6rem;font-size:.8rem;color:var(--muted);letter-spacing:.02em}
 
 /* ══════════════════ 9. CONTACTO ══════════════════ */
-.contact__lead{margin-top:1.5rem;max-width:44ch;color:var(--muted);font-size:clamp(1.05rem,3.2vw,1.2rem)}
+.contact__lead{margin-top:1.75rem;max-width:44ch;color:var(--muted);font-size:clamp(1.05rem,3.2vw,1.2rem)}
 .contact__list{margin:2.5rem 0 0;padding:0;list-style:none;display:grid;gap:1.15rem;max-width:34rem}
 .contact__row{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem}
 .contact__meta{font-size:.9rem;color:var(--muted);word-break:break-word}
@@ -269,14 +351,17 @@ a{color:var(--accent-text)}
 /* ══════════════════ 11. REVELADO AL SCROLLEAR ══════════════════
    Solo se oculta si el JavaScript está vivo (clase .js en <html>).
    Sin JavaScript, o con "reducir movimiento", todo se ve de entrada. */
-.js .reveal{opacity:0;transform:translateY(16px)}
+.js .reveal{opacity:0;transform:translateY(18px)}
 .js .reveal.is-visible{opacity:1;transform:none;transition:opacity .7s ease, transform .7s cubic-bezier(.22,.61,.36,1)}
 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none !important;transition:none !important}
   .js .reveal{opacity:1 !important;transform:none !important}
-  .btn:hover,.ground:hover{transform:none}
+  .btn:hover{transform:none}
+  .shot img,.shot:hover img,.hero__portrait img{transform:none !important}
+  .idea{transform:none !important}
+  .typer__caret{display:none}
 }
 </style>
 </head>
@@ -290,123 +375,171 @@ a{color:var(--accent-text)}
   <section class="hero" aria-labelledby="titulo">
     <div class="hero__inner shell">
 
-      <!-- ── HUECO PARA LA FOTO ────────────────────────────────────────
-           Descomentá este bloque cuando subas tu retrato como retrato.jpg
-           a esta misma carpeta. El diseño se reacomoda solo.
       <figure class="hero__portrait">
-        <img src="retrato.jpg" alt="Retrato de Lautaro Altamiranda Mastri" width="800" height="1000">
+        <picture>
+          <source srcset="assets/retrato.webp" type="image/webp">
+          <img src="assets/retrato.jpg" alt="Retrato de Lautaro Altamiranda Mastri" width="408" height="612" fetchpriority="high">
+        </picture>
       </figure>
-      -->
 
-      <p class="hero__name">Lautaro Altamiranda Mastri</p>
-      <hr class="hero__rule">
-      <h1 id="titulo">Hacer visible lo que vale, antes de que el otro pueda verlo.</h1>
-      <p class="hero__lead">Cofundador de CosteAR, un software de costos con IA para PyMEs. Marketing y ventas en una agencia de viajes. Escribo sobre negocios, tecnología, literatura y fe.</p>
+      <div class="hero__text">
+      <p class="hero__name">Lautaro Altamiranda Mastri · Tucumán, Argentina</p>
+      <h1 id="titulo">Hacer visible lo que vale, <em>antes</em> de que el otro pueda verlo.</h1>
+      <p class="hero__lead">En cuatro lugares distintos, todos los días.</p>
+
+      <!-- La lista que se escribe sola. El texto real está en el script del
+           final, en la constante FRASES; la versión de abajo es la que leen
+           los lectores de pantalla y la que se ve sin JavaScript. -->
+      <p class="typer" id="typer" aria-hidden="true"></p>
+      <p class="sr-only">En la parroquia. En la oficina. En la facultad. En la cancha.</p>
+
+      <!-- Los dos botones son iguales a propósito. -->
       <div class="hero__cta">
         <a class="btn btn--primary btn--wide" href="#contacto">Escribime</a>
-        <a class="textlink" href="#proyectos">Qué estoy construyendo &darr;</a>
+        <a class="btn btn--primary btn--wide" href="#ando">En qué ando &darr;</a>
+      </div>
       </div>
 
     </div>
   </section>
 
-  <!-- ══════════════ 2 · SOBRE MÍ ══════════════ -->
-  <section class="section" id="sobre-mi" aria-labelledby="t-sobre-mi">
+  <!-- ══════════════ 2 · QUIÉN SOY ══════════════ -->
+  <section class="section" id="quien-soy" aria-labelledby="t-quien-soy">
     <div class="shell reveal">
-      <p class="eyebrow">Sobre mí</p>
-      <h2 class="section__title" id="t-sobre-mi">Cuatro terrenos, una sola cosa</h2>
+      <p class="eyebrow">Quién soy</p>
+      <h2 class="section__title" id="t-quien-soy">Tengo 19 años y hago demasiadas cosas a la vez</h2>
       <div class="about__body">
-        <p>Hago lo mismo en cuatro lugares distintos. Vender es lograr que alguien vea el valor de algo antes de tenerlo. La literatura es el oficio de hacer que una idea aterrice en otro. La inteligencia artificial es la palanca: vuelve usable lo que era opaco. Y la fe es el caso límite del problema —comunicar algo que no se puede demostrar ni mostrar en una pantalla—, por eso es el terreno que más me enseñó sobre los otros tres.</p>
-        <p class="about__kicker">No son cuatro temas: es una sola operación practicada en cuatro lugares.</p>
+        <p>Vendo viajes en Mareterra, la agencia de mi familia. Construyo Costear, un software de costos con inteligencia artificial. Estudio Administración. En el medio leo, toco la guitarra y voy a misa.</p>
+        <p>Es difícil que se entienda desde afuera. A veces digo «me encantaría, pero no puedo» y me contestan «cómo no vas a poder si no haces nada?». No los culpo: de lejos parecen cuatro vidas sueltas. No lo son. <span class="mark">Todo se compagina en una sola persona.</span></p>
+        <p class="about__kicker">Son muchas cosas? Sí. Las voy a hacer todas bien? Posiblemente no. Pero no quiero dejar nada sin probar.</p>
       </div>
     </div>
   </section>
 
-  <!-- ══════════════ 3 · LOS CUATRO TERRENOS ══════════════ -->
-  <section class="section" id="terrenos" aria-labelledby="t-terrenos">
+  <!-- ══════════════ 3 · TIRA DE FOTOS ══════════════
+       Para cambiar una foto: reemplazá el par de archivos en assets/
+       (por ejemplo parroquia.jpg y parroquia.webp) y editá su texto en el
+       <figcaption> y en el alt. Nada más. Las fotos van en 3:4 vertical
+       (440×587) y sin metadatos: mirá el README. -->
+  <section class="section" id="fotos" aria-labelledby="t-fotos">
     <div class="shell reveal">
-      <p class="eyebrow">Los cuatro terrenos</p>
-      <h2 class="section__title" id="t-terrenos">La misma operación, cuatro veces</h2>
-      <ul class="grounds">
-        <li class="ground">
-          <span class="ground__num" aria-hidden="true">01</span>
-          <h3 class="ground__name">Negocios y venta</h3>
-          <p class="ground__what">Que alguien vea el valor antes de comprarlo.</p>
-        </li>
-        <li class="ground">
-          <span class="ground__num" aria-hidden="true">02</span>
-          <h3 class="ground__name">IA y tecnología</h3>
-          <p class="ground__what">La palanca: volver usable algo opaco.</p>
-        </li>
-        <li class="ground">
-          <span class="ground__num" aria-hidden="true">03</span>
-          <h3 class="ground__name">Literatura</h3>
-          <p class="ground__what">El oficio de hacer que una idea aterrice en otro.</p>
-        </li>
-        <li class="ground">
-          <span class="ground__num" aria-hidden="true">04</span>
-          <h3 class="ground__name">Fe</h3>
-          <p class="ground__what">Comunicar algo que no se puede demostrar ni mostrar en pantalla. El caso límite del problema, y por eso el que más enseña sobre los otros tres.</p>
-        </li>
+      <p class="eyebrow">Un poco de todo esto</p>
+      <h2 class="section__title" id="t-fotos">Lo que digo lo estoy viviendo</h2>
+      <ul class="strip">
+        <li><figure class="shot">
+          <picture><source srcset="assets/parroquia.webp" type="image/webp">
+          <img src="assets/parroquia.jpg" alt="Lautaro con el grupo de la parroquia, de noche bajo una galería, alrededor de una imagen de la Virgen" width="440" height="587" loading="lazy"></picture>
+          <figcaption>En la parroquia</figcaption>
+        </figure></li>
+        <li><figure class="shot">
+          <picture><source srcset="assets/costear-equipo.webp" type="image/webp">
+          <img src="assets/costear-equipo.jpg" alt="Lautaro de camisa blanca junto a dos socios de Costear, contra una pared de piedra" width="440" height="587" loading="lazy"></picture>
+          <figcaption>El equipo de Costear</figcaption>
+        </figure></li>
+        <li><figure class="shot">
+          <picture><source srcset="assets/emprende-u.webp" type="image/webp">
+          <img src="assets/emprende-u.jpg" alt="Lautaro presentando Costear en un aula, con el sistema de costos proyectado en la pantalla" width="440" height="587" loading="lazy"></picture>
+          <figcaption>Presentando en Emprende U</figcaption>
+        </figure></li>
+        <li><figure class="shot">
+          <picture><source srcset="assets/expocon.webp" type="image/webp">
+          <img src="assets/expocon.jpg" alt="Lautaro con sus padres en el stand de Costear en EXPOCON" width="440" height="587" loading="lazy"></picture>
+          <figcaption>El stand en EXPOCON, con mis viejos</figcaption>
+        </figure></li>
+        <li><figure class="shot">
+          <picture><source srcset="assets/mareterra-playa.webp" type="image/webp">
+          <img src="assets/mareterra-playa.jpg" alt="Lautaro con la remera de Mareterra frente a una playa de agua turquesa" width="440" height="587" loading="lazy"></picture>
+          <figcaption>Grabando para la agencia</figcaption>
+        </figure></li>
+        <li><figure class="shot">
+          <picture><source srcset="assets/mareterra-atardecer.webp" type="image/webp">
+          <img src="assets/mareterra-atardecer.jpg" alt="Lautaro de espaldas, filmando con el teléfono el sol que baja sobre el mar" width="440" height="587" loading="lazy"></picture>
+          <figcaption>El mismo viaje, al atardecer</figcaption>
+        </figure></li>
       </ul>
     </div>
   </section>
 
-  <!-- ══════════════ 4 · PROYECTOS ══════════════ -->
-  <section class="section" id="proyectos" aria-labelledby="t-proyectos">
+  <!-- ══════════════ 4 · EN QUÉ ANDO ══════════════
+       Los tres bloques pesan igual a propósito: la facultad no es un apéndice
+       de las otras dos cosas. Para agregar un cuarto, copiá un <article> entero
+       y ponele la clase project--next (la que dibuja la línea de arriba). -->
+  <section class="section" id="ando" aria-labelledby="t-ando">
     <div class="shell reveal">
       <p class="eyebrow">En qué ando</p>
-      <h2 class="section__title" id="t-proyectos">Proyectos</h2>
+      <h2 class="section__title" id="t-ando">Proyectos</h2>
 
       <article class="project">
         <div class="project__head">
-          <h3 class="project__name">CosteAR</h3>
-          <p class="project__role">Cofundador · En desarrollo</p>
+          <h3 class="project__name">Costear</h3>
+          <p class="project__role">Cofundador</p>
         </div>
         <div class="project__body">
           <p>En toda PyME hay plata enterrada en números que nadie mira bien: costos mal medidos, desvíos sin explicar, decisiones tomadas a ciegas. El estándar sigue siendo Excel —dinámico, sí, pero manual, lento y frágil—.</p>
-          <p>CosteAR mide, explica y convierte esos datos en decisiones, con trazabilidad total: cada número sabe de dónde viene. No reemplaza al profesional; el costista y el contador son los protagonistas, y la IA es el copiloto. Es específico por rubro, no un ERP genérico.</p>
-          <p>Hoy está en desarrollo, por lanzar. Es la primera línea de producto de SKATT, una casa de software de gestión con IA para Latinoamérica.</p>
+          <p>Costear le dice a una empresa cuánto le cuesta realmente cada unidad que produce y vende, con trazabilidad total: cada número sabe de dónde viene. No reemplaza al profesional; el costista y el contador son los protagonistas, y la IA es el copiloto. Es específico por rubro, no un ERP genérico.</p>
+          <p>Nació en <strong>Emprende U</strong>, un programa de emprendedorismo universitario, donde llegamos a semifinal con mención especial. Desde entonces tuvimos stand propio en <strong>EXPOCON</strong> y el proyecto salió en <strong>La Gaceta</strong>.</p>
+
+          <figure class="press">
+            <picture><source srcset="assets/costear-gaceta.webp" type="image/webp">
+            <img src="assets/costear-gaceta.jpg" alt="Recorte de La Gaceta: la plataforma usa inteligencia artificial para leer comprobantes, facturas o imágenes, extraer datos y alimentar un sistema de costos en tiempo real, para reducir la carga manual en pymes y consultores." width="880" height="239" loading="lazy"></picture>
+            <figcaption>La Gaceta, sección de gestión empresarial.</figcaption>
+          </figure>
         </div>
       </article>
 
-      <article class="project project--minor">
+      <article class="project project--next">
         <div class="project__head">
-          <h3 class="project__name">Agencia de viajes</h3>
-          <p class="project__role">Marketing y ventas</p>
+          <h3 class="project__name">Mareterra Viajes</h3>
+          <!-- Si preferís algo más literal que "Cofundador", acá entra
+               "Co-administrador" o "Socio" sin tocar nada más. -->
+          <p class="project__role">Cofundador</p>
         </div>
         <div class="project__body">
-          <p>Trabajo en una agencia de viajes cubriendo marketing digital, atención al cliente, cotizaciones y ventas. Es donde practico todos los días lo que escribo: comunicar valor frente a gente real, con decisiones reales.</p>
+          <p>La agencia de viajes de mi familia, en la que trabajo a la par de mi viejo: marketing digital, atención al cliente, cotizaciones y cada vez más ventas.</p>
+          <p>Es donde aprendí a vender de verdad, frente a gente real y con decisiones reales. Mi primera venta la hice yo entera, desde la primera consulta hasta el depósito en el banco, y no me la voy a olvidar nunca.</p>
         </div>
       </article>
 
-      <p class="study"><strong>Licenciatura en Administración</strong> — Estudiante.</p>
+      <article class="project project--next">
+        <div class="project__head">
+          <h3 class="project__name">Licenciatura en Administración</h3>
+          <p class="project__role">2º año</p>
+        </div>
+        <div class="project__body">
+          <p>No la elegí por descarte. La elegí porque es la única carrera que me deja hacer, el mismo día, las dos cosas que quiero hacer: entender cómo funciona una empresa por dentro y después ir a probarlo en una de verdad.</p>
+          <p>Eso es lo que más me gusta: que casi nada de lo que veo se queda en el apunte. Lo que estudio a la mañana lo estoy usando a la tarde —en una cotización, en una discusión sobre cómo medir un costo, en una decisión que hay que tomar con datos incompletos—. Estudiar y trabajar dejaron de ser dos cosas distintas hace rato.</p>
+          <p>Y hay una razón menos elegante que también es cierta, y prefiero decirla: no me consume todos los días. Una carrera más pesada me habría obligado a elegir una sola de las cuatro cosas que hago. Esta me deja sostenerlas todas, y esa es exactamente la vida que quiero tener.</p>
+        </div>
+      </article>
     </div>
   </section>
 
-  <!-- ══════════════ 5 · SOBRE QUÉ PUBLICO ══════════════ -->
-  <section class="section" id="publico" aria-labelledby="t-publico">
+  <!-- ══════════════ 5 · CÓMO PIENSO ══════════════ -->
+  <section class="section" id="pienso" aria-labelledby="t-pienso">
     <div class="shell reveal">
-      <p class="eyebrow">Sobre qué publico</p>
-      <h2 class="section__title" id="t-publico">Tres pilares, una función cada uno</h2>
-      <ul class="pillars">
-        <li class="pillar">
-          <h3 class="pillar__name">Lifestyle</h3>
-          <p class="pillar__what">La evidencia. Que se vea que lo que digo lo estoy viviendo.</p>
+      <p class="eyebrow">Cómo pienso</p>
+      <h2 class="section__title" id="t-pienso">Tres cosas que creo, y por qué</h2>
+      <ul class="ideas">
+
+        <li class="idea">
+          <span class="idea__num" aria-hidden="true">01</span>
+          <h3 class="idea__name">La inteligencia artificial sirve para ganar tiempo, no para reemplazarte</h3>
+          <p class="idea__what">Esa es mi síntesis en una línea. La uso todos los días y justamente por eso desconfío con método: una vez comparé el resumen automático de una visita a una empresa contra la grabación entera y encontré diez errores. Uno multiplicaba un costo por trece. Otro se había inventado el nombre de una persona. Desde entonces ningún número que sale de una máquina entra a un informe sin que alguien lo mire dos veces.</p>
         </li>
-        <li class="pillar">
-          <h3 class="pillar__name">Valor</h3>
-          <p class="pillar__what">La utilidad. Venta, costos, IA aplicada, cómo se sostienen varios frentes a la vez.</p>
+
+        <li class="idea">
+          <span class="idea__num" aria-hidden="true">02</span>
+          <h3 class="idea__name">Hacer muchas cosas no es dispersarse</h3>
+          <p class="idea__what">Es lo que más me repito. Uno siente que tiene un millón de cosas en la cabeza, dispersadas y al mismo tiempo juntas, porque todo se compagina en una sola persona. Vender un viaje, medir un costo, escribir, rezar: <em>es la misma operación en cuatro lugares</em>. Hacer que algo que todavía no se ve, se vea.</p>
         </li>
-        <li class="pillar">
-          <h3 class="pillar__name">Filosofía</h3>
-          <p class="pillar__what">El porqué. Fe, literatura, criterio.</p>
+
+        <li class="idea">
+          <span class="idea__num" aria-hidden="true">03</span>
+          <h3 class="idea__name">Pensar es un acto de rebeldía</h3>
+          <p class="idea__what">La idea es de Byung-Chul Han, en <em>La sociedad del cansancio</em>, y me movió más que ningún otro libro: vivimos en un mundo hiperactivo donde uno termina siendo víctima y verdugo de sí mismo. Leer —Han, Salinger, Orwell, Frankl— es lo que me saca de ahí un rato. No leo para tener una opinión lista: leo para poder discutir conmigo mismo.</p>
         </li>
+
       </ul>
-      <p class="pillars__after">
-        <!-- [CONTACTO] Instagram -->
-        <a class="textlink" href="https://www.instagram.com/lautiialtamiranda/" target="_blank" rel="noopener noreferrer">Seguime en Instagram &rarr;</a>
-      </p>
     </div>
   </section>
 
@@ -425,8 +558,12 @@ a{color:var(--accent-text)}
         <li class="contact__row">
           <!-- [CONTACTO] Email — el href es el que funciona sin JavaScript; la
                dirección visible la arma el script del final, desde dos partes. -->
-          <a class="btn btn--ghost btn--wide" href="mailto:lautaroaltamiranda07@gmail.com">Mandame un correo</a>
+          <a class="btn btn--primary btn--wide" href="mailto:lautaroaltamiranda07@gmail.com">Mandame un correo</a>
           <span class="contact__meta" data-mail-user="lautaroaltamiranda07" data-mail-domain="gmail.com">Correo electrónico</span>
+        </li>
+        <li class="contact__row">
+          <!-- [CONTACTO] Instagram -->
+          <a class="textlink" href="https://www.instagram.com/lautiialtamiranda/" target="_blank" rel="noopener noreferrer">Seguime en Instagram &rarr;</a>
         </li>
         <li class="contact__row">
           <!-- [CONTACTO] LinkedIn -->
@@ -448,32 +585,90 @@ a{color:var(--accent-text)}
 (function () {
   'use strict';
 
-  /* Escribe la dirección de correo recién en el navegador, para no dejarla
-     en texto plano a la vista de los robots que rastrean páginas. El mailto
-     del botón sigue andando aunque el visitante tenga JavaScript apagado. */
+  var quieto = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  /* ── 1. El correo ────────────────────────────────────────────────────
+     Se escribe recién en el navegador, para no dejarlo en texto plano a la
+     vista de los robots que rastrean páginas. El mailto del botón sigue
+     andando aunque el visitante tenga JavaScript apagado. */
   document.querySelectorAll('[data-mail-user]').forEach(function (el) {
     el.textContent = el.dataset.mailUser + String.fromCharCode(64) + el.dataset.mailDomain;
   });
 
-  /* Revelado suave de cada sección al entrar en pantalla. */
-  var quieto = window.matchMedia('(prefers-reduced-motion: reduce)');
-  var bloques = document.querySelectorAll('.reveal');
+  /* ── 2. La máquina de escribir del hero ──────────────────────────────
+     Para cambiar las frases, editá esta lista. La última es la que queda
+     fija cuando termina la vuelta. */
+  var FRASES = [
+    'En la parroquia.',
+    'En la oficina.',
+    'En la facultad.',
+    'En la cancha.'
+  ];
 
-  if (quieto.matches || !('IntersectionObserver' in window)) {
-    bloques.forEach(function (el) { el.classList.add('is-visible'); });
-    return;
+  var typer = document.getElementById('typer');
+  if (typer) {
+    var texto = document.createElement('span');
+    var caret = document.createElement('span');
+    caret.className = 'typer__caret';
+    typer.appendChild(texto);
+    typer.appendChild(caret);
+
+    if (quieto.matches) {
+      texto.textContent = FRASES[FRASES.length - 1];
+    } else {
+      var i = 0, letra = 0, borrando = false;
+      (function tick() {
+        var frase = FRASES[i];
+        texto.textContent = frase.slice(0, letra);
+
+        var espera;
+        if (!borrando && letra === frase.length) {
+          if (i === FRASES.length - 1) { return; }   // la última se queda
+          borrando = true; espera = 1500;
+        } else if (borrando && letra === 0) {
+          borrando = false; i++; espera = 260;
+        } else {
+          letra += borrando ? -1 : 1;
+          espera = borrando ? 28 : 55;
+        }
+        setTimeout(tick, espera);
+      })();
+    }
   }
 
-  var observador = new IntersectionObserver(function (entradas) {
-    entradas.forEach(function (entrada) {
-      if (entrada.isIntersecting) {
-        entrada.target.classList.add('is-visible');
-        observador.unobserve(entrada.target);
-      }
-    });
-  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
+  /* ── 3. Revelado suave de cada sección al entrar en pantalla ─────────── */
+  var bloques = document.querySelectorAll('.reveal');
+  if (quieto.matches || !('IntersectionObserver' in window)) {
+    bloques.forEach(function (el) { el.classList.add('is-visible'); });
+  } else {
+    var observador = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (entrada) {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add('is-visible');
+          observador.unobserve(entrada.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
+    bloques.forEach(function (el) { observador.observe(el); });
+  }
 
-  bloques.forEach(function (el) { observador.observe(el); });
+  /* ── 4. Las tarjetas de "cómo pienso" se inclinan siguiendo el mouse ──
+     Solo con mouse de verdad (en pantallas táctiles no se activa) y solo
+     si el visitante no pidió reducir el movimiento. */
+  var fino = window.matchMedia('(hover: hover) and (pointer: fine)');
+  if (!quieto.matches && fino.matches) {
+    document.querySelectorAll('.idea').forEach(function (card) {
+      card.addEventListener('pointermove', function (e) {
+        var r = card.getBoundingClientRect();
+        var x = (e.clientX - r.left) / r.width - 0.5;
+        var y = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform =
+          'perspective(900px) rotateX(' + (-y * 4).toFixed(2) + 'deg) rotateY(' +
+          (x * 4).toFixed(2) + 'deg) translateY(-3px)';
+      });
+      card.addEventListener('pointerleave', function () { card.style.transform = ''; });
+    });
+  }
 })();
 </script>
 </body>

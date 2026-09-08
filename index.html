@@ -16,7 +16,7 @@
 -->
 
 <title>Lautaro Altamiranda Mastri — Estudio y trabajo. Aprendo y aplico.</title>
-<meta name="description" content="Tengo 19 años y hago demasiadas cosas a la vez: vendo viajes en Mareterra, construyo Costear —un software de costos con IA— y estudio Administración. Tucumán, Argentina.">
+<meta name="description" content="Tengo 19 años y no me quiero perder nada: vendo viajes en Mareterra, construyo Costear —un software de costos con IA— y estudio Administración. Tucumán, Argentina.">
 <meta name="author" content="Lautaro Altamiranda Mastri">
 <meta name="theme-color" content="#FDF8F0" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#171310" media="(prefers-color-scheme: dark)">
@@ -34,7 +34,7 @@
 <meta property="og:locale" content="es_AR">
 <meta property="og:site_name" content="Lautaro Altamiranda Mastri">
 <meta property="og:title" content="Lautaro Altamiranda Mastri — Estudio y trabajo. Aprendo y aplico.">
-<meta property="og:description" content="Tengo 19 años y hago demasiadas cosas a la vez. Vendo viajes, construyo software de costos con IA y estudio. Lo que aprendo a la mañana lo aplico a la tarde.">
+<meta property="og:description" content="Tengo 19 años y no me quiero perder nada. Vendo viajes, construyo software de costos con IA y estudio. Lo que aprendo a la mañana lo aplico a la tarde.">
 <meta property="og:url" content="https://g-lautiialtamiranda.github.io/">
 <meta property="og:image" content="https://g-lautiialtamiranda.github.io/og.png">
 <meta property="og:image:width" content="1200">
@@ -42,7 +42,7 @@
 <meta property="og:image:alt" content="Lautaro Altamiranda Mastri — Estudio y trabajo. Aprendo y aplico.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Lautaro Altamiranda Mastri — Estudio y trabajo. Aprendo y aplico.">
-<meta name="twitter:description" content="Tengo 19 años y hago demasiadas cosas a la vez. Vendo viajes, construyo software de costos con IA y estudio. Lo que aprendo a la mañana lo aplico a la tarde.">
+<meta name="twitter:description" content="Tengo 19 años y no me quiero perder nada. Vendo viajes, construyo software de costos con IA y estudio. Lo que aprendo a la mañana lo aplico a la tarde.">
 <meta name="twitter:image" content="https://g-lautiialtamiranda.github.io/og.png">
 
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -205,8 +205,9 @@ a{color:var(--accent-text)}
    Para cambiar la foto: reemplazá assets/retrato.jpg y assets/retrato.webp
    por otras dos del mismo tamaño (308×462) y listo.
    Al recortarla, fijate dónde queda la cara: tiene que caer más o menos a la
-   mitad del ancho y a un tercio de la altura. La versión anterior la tenía al
-   78% del ancho y sobraba fondo desenfocado a la izquierda. */
+   mitad del ancho y a un tercio de la altura. La de ahora —el stand de
+   Costear en EXPOCON— está recortada así: la cara al medio y el logo de la
+   marca entrando por la derecha. */
 .hero__portrait{margin:0 0 2.25rem;width:min(52vw,13rem)}
 .hero__portrait img{
   width:100%;border-radius:.7rem;
@@ -258,7 +259,7 @@ a{color:var(--accent-text)}
    En teléfono se desliza de costado; en pantalla grande entra toda. */
 .strip{
   margin-top:2.5rem;padding:0;list-style:none;
-  display:grid;grid-auto-flow:column;grid-auto-columns:minmax(9.5rem,1fr);
+  display:grid;grid-auto-flow:column;grid-auto-columns:minmax(11rem,1fr);
   gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;
   padding-bottom:1rem;
   scrollbar-width:thin;
@@ -281,8 +282,19 @@ a{color:var(--accent-text)}
 .strip > li .shot:hover img{transform:rotate(0deg) scale(1.045)}
 .shot figcaption{
   margin-top:.7rem;font-size:.8rem;color:var(--muted);
-  letter-spacing:.02em;
+  letter-spacing:.02em;line-height:1.45;text-wrap:pretty;
 }
+
+/* Las seis no aparecen todas juntas: entran una detrás de otra. El retardo va
+   sobre el <li>, que es el que lleva la clase .reveal; el opacity:0 de arranque
+   y la transición se los pone el bloque 11, al final de la hoja. En teléfono,
+   donde la tira se desliza de costado, las que están fuera de pantalla esperan
+   a que las traigas — y entran igual, de a una. */
+.js .strip > li:nth-child(2).is-visible{transition-delay:.07s}
+.js .strip > li:nth-child(3).is-visible{transition-delay:.14s}
+.js .strip > li:nth-child(4).is-visible{transition-delay:.21s}
+.js .strip > li:nth-child(5).is-visible{transition-delay:.28s}
+.js .strip > li:nth-child(6).is-visible{transition-delay:.35s}
 
 /* ══════════════════ 7. CÓMO PIENSO ══════════════════ */
 .ideas{margin-top:3rem;display:grid;gap:1.25rem;list-style:none;padding:0}
@@ -375,7 +387,7 @@ a{color:var(--accent-text)}
       <figure class="hero__portrait">
         <picture>
           <source srcset="assets/retrato.webp" type="image/webp">
-          <img src="assets/retrato.jpg" alt="Retrato de Lautaro Altamiranda Mastri" width="308" height="462" fetchpriority="high">
+          <img src="assets/retrato.jpg" alt="Lautaro en el stand de Costear en EXPOCON, sentado frente a la notebook" width="308" height="462" fetchpriority="high">
         </picture>
       </figure>
 
@@ -404,11 +416,11 @@ a{color:var(--accent-text)}
   <section class="section" id="quien-soy" aria-labelledby="t-quien-soy">
     <div class="shell reveal">
       <p class="eyebrow">Quién soy</p>
-      <h2 class="section__title" id="t-quien-soy">Tengo 19 años y hago demasiadas cosas a la vez</h2>
+      <h2 class="section__title" id="t-quien-soy">Tengo 19 años y no me quiero perder nada</h2>
       <div class="about__body">
         <p>Vendo viajes en Mareterra, la agencia de mi familia. Construyo Costear, un software de costos con inteligencia artificial. Estudio Administración. Y en el medio, mi vida personal —que es la que sostiene las otras tres—.</p>
-        <p>Es difícil que se entienda desde afuera. A veces digo «me encantaría, pero no puedo» y me contestan «cómo no vas a poder si no haces nada?». No los culpo: de lejos parecen cuatro vidas sueltas. No lo son. <span class="mark">Todo se compagina en una sola persona.</span></p>
-        <p class="about__kicker">Son muchas cosas? Sí. Las voy a hacer todas bien? Posiblemente no. Pero no quiero dejar nada sin probar.</p>
+        <p>De afuera parecen cuatro vidas sueltas, y entiendo que cueste verlo. No lo son: se turnan, se prestan cosas, se explican entre ellas. Lo que aprendo en una me sirve en las otras tres. <span class="mark">Todo se compagina en una sola persona.</span></p>
+        <p class="about__kicker">Son muchas cosas? Sí, y las quiero todas. Tener el día lleno a esta edad es exactamente la vida que quería tener.</p>
       </div>
     </div>
   </section>
@@ -423,35 +435,35 @@ a{color:var(--accent-text)}
       <p class="eyebrow">Un poco de todo esto</p>
       <h2 class="section__title" id="t-fotos">Lo que digo lo estoy viviendo</h2>
       <ul class="strip">
-        <li><figure class="shot">
+        <li class="reveal"><figure class="shot">
           <picture><source srcset="assets/parroquia.webp" type="image/webp">
           <img src="assets/parroquia.jpg" alt="Lautaro con el grupo de la parroquia, de noche bajo una galería, alrededor de una imagen de la Virgen" width="440" height="587" loading="lazy"></picture>
-          <figcaption>En la parroquia</figcaption>
+          <figcaption>En la parroquia, con el grupo de siempre.</figcaption>
         </figure></li>
-        <li><figure class="shot">
+        <li class="reveal"><figure class="shot">
           <picture><source srcset="assets/costear-equipo.webp" type="image/webp">
           <img src="assets/costear-equipo.jpg" alt="Lautaro de camisa blanca junto a dos socios de Costear, contra una pared de piedra" width="440" height="587" loading="lazy"></picture>
-          <figcaption>El equipo de Costear</figcaption>
+          <figcaption>El equipo de Costear. Nada de esto lo armé solo.</figcaption>
         </figure></li>
-        <li><figure class="shot">
+        <li class="reveal"><figure class="shot">
           <picture><source srcset="assets/emprende-u.webp" type="image/webp">
           <img src="assets/emprende-u.jpg" alt="Lautaro presentando Costear en un aula, con el sistema de costos proyectado en la pantalla" width="440" height="587" loading="lazy"></picture>
-          <figcaption>Presentando en Emprende U</figcaption>
+          <figcaption>Emprende U: contarlo en voz alta y que se entienda.</figcaption>
         </figure></li>
-        <li><figure class="shot">
+        <li class="reveal"><figure class="shot">
           <picture><source srcset="assets/expocon.webp" type="image/webp">
           <img src="assets/expocon.jpg" alt="Lautaro con sus padres en el stand de Costear en EXPOCON" width="440" height="587" loading="lazy"></picture>
-          <figcaption>El stand en EXPOCON, con mis viejos</figcaption>
+          <figcaption>El stand en EXPOCON. Mis viejos vinieron a ver en qué andaba.</figcaption>
         </figure></li>
-        <li><figure class="shot">
+        <li class="reveal"><figure class="shot">
           <picture><source srcset="assets/mareterra-playa.webp" type="image/webp">
           <img src="assets/mareterra-playa.jpg" alt="Lautaro con la remera de Mareterra frente a una playa de agua turquesa" width="440" height="587" loading="lazy"></picture>
-          <figcaption>Grabando para la agencia</figcaption>
+          <figcaption>Grabando para la agencia. Vender un viaje es saber contarlo.</figcaption>
         </figure></li>
-        <li><figure class="shot">
+        <li class="reveal"><figure class="shot">
           <picture><source srcset="assets/mareterra-atardecer.webp" type="image/webp">
           <img src="assets/mareterra-atardecer.jpg" alt="Lautaro de espaldas, filmando con el teléfono el sol que baja sobre el mar" width="440" height="587" loading="lazy"></picture>
-          <figcaption>El mismo viaje, al atardecer</figcaption>
+          <figcaption>El mismo viaje, al atardecer. Esto también es trabajo.</figcaption>
         </figure></li>
       </ul>
     </div>
@@ -520,8 +532,8 @@ a{color:var(--accent-text)}
 
         <li class="idea">
           <span class="idea__num" aria-hidden="true">01</span>
-          <h3 class="idea__name">La inteligencia artificial sirve para ganar tiempo, no para reemplazarte</h3>
-          <p class="idea__what">La uso todos los días, y justamente por eso desconfío. Una vez comparé el resumen automático de una visita a una empresa contra la grabación entera: diez errores. Uno multiplicaba un costo por trece. Otro se había inventado el nombre de una persona. Desde entonces ningún número que sale de una máquina entra a un informe sin que alguien lo mire dos veces.</p>
+          <h3 class="idea__name">Las buenas herramientas te devuelven tiempo, y el tiempo es lo único que no se compra</h3>
+          <p class="idea__what">La inteligencia artificial me cambió el día: lo que antes era una tarde entera —ordenar comprobantes, armar un informe— hoy es un rato, y ese rato lo uso para pensar. La uso todos los días y cada vez le encuentro más lugares. Lo único que no me salteo es mirar el resultado: una vez comparé un resumen automático contra la grabación entera y encontré cosas para corregir. No me hizo desconfiar, me enseñó dónde mirar. <em>Es un copiloto buenísimo, y el que firma sigue siendo el que decide.</em></p>
         </li>
 
         <li class="idea">
@@ -574,7 +586,9 @@ a{color:var(--accent-text)}
 
 <footer class="footer">
   <div class="shell">
-    <p>Lautaro Altamiranda Mastri · Tucumán, Argentina · 2026</p>
+    <!-- El año lo pone el script del final. El 2026 escrito acá es el que se ve
+         si el visitante tiene JavaScript apagado: dejalo, no lo borres. -->
+    <p>Lautaro Altamiranda Mastri · Tucumán, Argentina · <span id="anio">2026</span></p>
   </div>
 </footer>
 
@@ -592,7 +606,12 @@ a{color:var(--accent-text)}
     el.textContent = el.dataset.mailUser + String.fromCharCode(64) + el.dataset.mailDomain;
   });
 
-  /* ── 2. La máquina de escribir del hero ──────────────────────────────
+  /* ── 2. El año del pie ───────────────────────────────────────────────
+     Así no hay que acordarse de cambiarlo cada 1 de enero. */
+  var anio = document.getElementById('anio');
+  if (anio) { anio.textContent = new Date().getFullYear(); }
+
+  /* ── 3. La máquina de escribir del hero ──────────────────────────────
      Para cambiar las frases, editá esta lista. La última es la que queda
      fija cuando termina la vuelta. */
   var FRASES = [
@@ -633,7 +652,7 @@ a{color:var(--accent-text)}
     }
   }
 
-  /* ── 3. Revelado suave de cada sección al entrar en pantalla ─────────── */
+  /* ── 4. Revelado suave de cada sección al entrar en pantalla ─────────── */
   var bloques = document.querySelectorAll('.reveal');
   if (quieto.matches || !('IntersectionObserver' in window)) {
     bloques.forEach(function (el) { el.classList.add('is-visible'); });
@@ -649,7 +668,7 @@ a{color:var(--accent-text)}
     bloques.forEach(function (el) { observador.observe(el); });
   }
 
-  /* ── 4. Las tarjetas de "cómo pienso" se inclinan siguiendo el mouse ──
+  /* ── 5. Las tarjetas de "cómo pienso" se inclinan siguiendo el mouse ──
      Solo con mouse de verdad (en pantallas táctiles no se activa) y solo
      si el visitante no pidió reducir el movimiento. */
   var fino = window.matchMedia('(hover: hover) and (pointer: fine)');

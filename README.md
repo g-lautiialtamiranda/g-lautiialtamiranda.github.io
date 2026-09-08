@@ -79,6 +79,12 @@ está entre `>` y `</p>`:
 > segunda línea en itálica naranja), el epígrafe con el marcador amarillo y el mismo
 > retrato que el hero, rotado y con marco blanco.
 
+### El año del pie
+
+No hay que tocarlo: lo escribe el navegador solo, con el año en curso. En el HTML
+está puesto `2026` a mano, pero eso es únicamente lo que se ve si el visitante tiene
+JavaScript apagado — dejalo ahí.
+
 ### Los datos de contacto
 
 Están en cuatro lugares, todos marcados con el comentario **`[CONTACTO]`**. Hay además un
@@ -101,7 +107,7 @@ manteniendo el nombre:
 
 | Archivo | Qué es | Recorte |
 |---|---|---|
-| `retrato` | El retrato del hero | Vertical 2:3 (308×462) |
+| `retrato` | El retrato del hero: vos en el stand de Costear en EXPOCON | Vertical 2:3 (308×462) |
 | `parroquia` | El grupo de la parroquia | Vertical 3:4 (440×587) |
 | `costear-equipo` | Vos con dos socios de Costear | Vertical 3:4 (440×587) |
 | `emprende-u` | Presentando, con el sistema proyectado | Vertical 3:4 (440×587) |
@@ -110,9 +116,12 @@ manteniendo el nombre:
 | `mareterra-atardecer` | De espaldas, filmando el atardecer | Vertical 3:4 (440×587) |
 | `costear-gaceta` | El recorte del diario, dentro del bloque de Costear | Apaisado (880×239) |
 
-Después, en `index.html`, actualizá el **`alt`** y el **`<figcaption>`** de esa foto para
-que digan lo que se ve. El `alt` es lo que lee alguien que no puede ver la imagen: escribí
-qué pasa en la foto, no «foto 3».
+Después, en `index.html`, actualizá el **`alt`** y el **`<figcaption>`** de esa foto. Son
+dos cosas distintas y conviene no repetirlas: el `alt` es lo que lee alguien que no puede
+ver la imagen —escribí qué pasa en la foto, no «foto 3»—, y el `<figcaption>` es lo que lee
+todo el mundo debajo de la foto. Ese va en tu voz y **dice algo**: no «En la parroquia»
+sino «En la parroquia. Es la parte que no entra en ningún currículum». Una línea, dos como
+mucho; si se hace más largo, deja de leerse.
 
 > **Sacales los metadatos.** Una foto sacada con el teléfono viaja con la fecha, el modelo del
 > aparato y, muy seguido, las **coordenadas GPS exactas** de dónde se tomó. Publicada tal cual,

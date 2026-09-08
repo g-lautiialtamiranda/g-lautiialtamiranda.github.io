@@ -15,8 +15,8 @@
   ═══════════════════════════════════════════════════════════════════════
 -->
 
-<title>Lautaro Altamiranda Mastri — Hacer visible lo que vale</title>
-<meta name="description" content="Tengo 19 años y hago demasiadas cosas a la vez: vendo viajes en Mareterra, construyo Costear —un software de costos con IA— y estudio Administración. En el medio leo, toco la guitarra y voy a misa. Tucumán, Argentina.">
+<title>Lautaro Altamiranda Mastri — Estudio y trabajo. Aprendo y aplico.</title>
+<meta name="description" content="Tengo 19 años y hago demasiadas cosas a la vez: vendo viajes en Mareterra, construyo Costear —un software de costos con IA— y estudio Administración. Tucumán, Argentina.">
 <meta name="author" content="Lautaro Altamiranda Mastri">
 <meta name="theme-color" content="#FDF8F0" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#171310" media="(prefers-color-scheme: dark)">
@@ -33,16 +33,16 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_AR">
 <meta property="og:site_name" content="Lautaro Altamiranda Mastri">
-<meta property="og:title" content="Lautaro Altamiranda Mastri — Hacer visible lo que vale">
-<meta property="og:description" content="Tengo 19 años y hago demasiadas cosas a la vez. Vendo viajes, construyo software de costos con IA y estudio. En el medio leo, toco la guitarra y voy a misa.">
+<meta property="og:title" content="Lautaro Altamiranda Mastri — Estudio y trabajo. Aprendo y aplico.">
+<meta property="og:description" content="Tengo 19 años y hago demasiadas cosas a la vez. Vendo viajes, construyo software de costos con IA y estudio. Lo que aprendo a la mañana lo aplico a la tarde.">
 <meta property="og:url" content="https://g-lautiialtamiranda.github.io/">
 <meta property="og:image" content="https://g-lautiialtamiranda.github.io/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Lautaro Altamiranda Mastri — Hacer visible lo que vale, antes de que el otro pueda verlo.">
+<meta property="og:image:alt" content="Lautaro Altamiranda Mastri — Estudio y trabajo. Aprendo y aplico.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Lautaro Altamiranda Mastri — Hacer visible lo que vale">
-<meta name="twitter:description" content="Tengo 19 años y hago demasiadas cosas a la vez. Vendo viajes, construyo software de costos con IA y estudio.">
+<meta name="twitter:title" content="Lautaro Altamiranda Mastri — Estudio y trabajo. Aprendo y aplico.">
+<meta name="twitter:description" content="Tengo 19 años y hago demasiadas cosas a la vez. Vendo viajes, construyo software de costos con IA y estudio. Lo que aprendo a la mañana lo aplico a la tarde.">
 <meta name="twitter:image" content="https://g-lautiialtamiranda.github.io/og.png">
 
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -203,8 +203,11 @@ a{color:var(--accent-text)}
 
 /* ── EL RETRATO ──────────────────────────────────────────────────────
    Para cambiar la foto: reemplazá assets/retrato.jpg y assets/retrato.webp
-   por otras dos del mismo tamaño (408×612) y listo. */
-.hero__portrait{margin:0 0 2.25rem;width:min(46vw,11rem)}
+   por otras dos del mismo tamaño (308×462) y listo.
+   Al recortarla, fijate dónde queda la cara: tiene que caer más o menos a la
+   mitad del ancho y a un tercio de la altura. La versión anterior la tenía al
+   78% del ancho y sobraba fondo desenfocado a la izquierda. */
+.hero__portrait{margin:0 0 2.25rem;width:min(52vw,13rem)}
 .hero__portrait img{
   width:100%;border-radius:.7rem;
   border:3px solid var(--surface);box-shadow:var(--shadow);
@@ -217,7 +220,7 @@ a{color:var(--accent-text)}
   /* Dos columnas: el texto a la izquierda y el retrato a la derecha. En
      teléfono no hace falta ninguna regla — el orden del HTML ya es el bueno. */
   .hero__inner{
-    display:grid;grid-template-columns:1fr minmax(0,17rem);
+    display:grid;grid-template-columns:1fr minmax(0,20rem);
     gap:clamp(2rem,6vw,4.5rem);align-items:center;
   }
   .hero__portrait{order:2;margin:0;width:100%}
@@ -232,20 +235,14 @@ a{color:var(--accent-text)}
   text-decoration:none;cursor:pointer;
   transition:transform .18s ease, background-color .18s ease, border-color .18s ease, color .18s ease, box-shadow .18s ease;
 }
-/* Los dos botones de cada par son idénticos a propósito: ninguna de las dos
-   formas de escribirme vale más que la otra. Si algún día querés que uno pese
-   más que el otro, esto es lo único que hay que volver a partir en dos. */
+/* Todos los botones de la página son idénticos a propósito —los dos del hero y
+   los cuatro del contacto—: ninguna de las cuatro formas de escribirme vale más
+   que las otras. Si algún día querés que una pese más que las demás, esto es lo
+   único que hay que volver a partir en dos. */
 .btn--primary{background:var(--accent-text);color:var(--on-accent);box-shadow:var(--shadow)}
 .btn--primary:hover{transform:translateY(-3px) rotate(-1deg);background:var(--accent)}
 .btn--wide{width:100%}
 @media (min-width:30rem){ .btn--wide{width:auto} }
-
-.textlink{
-  font-family:var(--sans);font-size:1rem;font-weight:600;color:var(--accent-text);
-  text-decoration:none;border-bottom:2px solid color-mix(in srgb, var(--yellow) 85%, transparent);
-  padding-bottom:.12rem;transition:border-color .18s ease, opacity .18s ease;
-}
-.textlink:hover{border-color:var(--accent);opacity:.85}
 
 /* ══════════════════ 5. QUIÉN SOY ══════════════════ */
 .about__body{margin-top:2rem;display:grid;gap:1.35rem;max-width:56ch}
@@ -378,14 +375,14 @@ a{color:var(--accent-text)}
       <figure class="hero__portrait">
         <picture>
           <source srcset="assets/retrato.webp" type="image/webp">
-          <img src="assets/retrato.jpg" alt="Retrato de Lautaro Altamiranda Mastri" width="408" height="612" fetchpriority="high">
+          <img src="assets/retrato.jpg" alt="Retrato de Lautaro Altamiranda Mastri" width="308" height="462" fetchpriority="high">
         </picture>
       </figure>
 
       <div class="hero__text">
       <p class="hero__name">Lautaro Altamiranda Mastri · Tucumán, Argentina</p>
-      <h1 id="titulo">Hacer visible lo que vale, <em>antes</em> de que el otro pueda verlo.</h1>
-      <p class="hero__lead">En cuatro lugares distintos, todos los días.</p>
+      <h1 id="titulo">Estudio y trabajo. <em>Aprendo y aplico.</em></h1>
+      <p class="hero__lead">Tengo 19 años y todos los días paso por cuatro lugares distintos.</p>
 
       <!-- La lista que se escribe sola. El texto real está en el script del
            final, en la constante FRASES; la versión de abajo es la que leen
@@ -393,7 +390,7 @@ a{color:var(--accent-text)}
       <p class="typer" id="typer" aria-hidden="true"></p>
       <p class="sr-only">En la parroquia. En la oficina. En la facultad. En la cancha.</p>
 
-      <!-- Los dos botones son iguales a propósito. -->
+      <!-- Los dos botones son iguales a propósito, igual que los cuatro del contacto. -->
       <div class="hero__cta">
         <a class="btn btn--primary btn--wide" href="#contacto">Escribime</a>
         <a class="btn btn--primary btn--wide" href="#ando">En qué ando &darr;</a>
@@ -409,7 +406,7 @@ a{color:var(--accent-text)}
       <p class="eyebrow">Quién soy</p>
       <h2 class="section__title" id="t-quien-soy">Tengo 19 años y hago demasiadas cosas a la vez</h2>
       <div class="about__body">
-        <p>Vendo viajes en Mareterra, la agencia de mi familia. Construyo Costear, un software de costos con inteligencia artificial. Estudio Administración. En el medio leo, toco la guitarra y voy a misa.</p>
+        <p>Vendo viajes en Mareterra, la agencia de mi familia. Construyo Costear, un software de costos con inteligencia artificial. Estudio Administración. Y en el medio, mi vida personal —que es la que sostiene las otras tres—.</p>
         <p>Es difícil que se entienda desde afuera. A veces digo «me encantaría, pero no puedo» y me contestan «cómo no vas a poder si no haces nada?». No los culpo: de lejos parecen cuatro vidas sueltas. No lo son. <span class="mark">Todo se compagina en una sola persona.</span></p>
         <p class="about__kicker">Son muchas cosas? Sí. Las voy a hacer todas bien? Posiblemente no. Pero no quiero dejar nada sin probar.</p>
       </div>
@@ -524,19 +521,19 @@ a{color:var(--accent-text)}
         <li class="idea">
           <span class="idea__num" aria-hidden="true">01</span>
           <h3 class="idea__name">La inteligencia artificial sirve para ganar tiempo, no para reemplazarte</h3>
-          <p class="idea__what">Esa es mi síntesis en una línea. La uso todos los días y justamente por eso desconfío con método: una vez comparé el resumen automático de una visita a una empresa contra la grabación entera y encontré diez errores. Uno multiplicaba un costo por trece. Otro se había inventado el nombre de una persona. Desde entonces ningún número que sale de una máquina entra a un informe sin que alguien lo mire dos veces.</p>
+          <p class="idea__what">La uso todos los días, y justamente por eso desconfío. Una vez comparé el resumen automático de una visita a una empresa contra la grabación entera: diez errores. Uno multiplicaba un costo por trece. Otro se había inventado el nombre de una persona. Desde entonces ningún número que sale de una máquina entra a un informe sin que alguien lo mire dos veces.</p>
         </li>
 
         <li class="idea">
           <span class="idea__num" aria-hidden="true">02</span>
-          <h3 class="idea__name">Hacer muchas cosas no es dispersarse</h3>
-          <p class="idea__what">Es lo que más me repito. Uno siente que tiene un millón de cosas en la cabeza, dispersadas y al mismo tiempo juntas, porque todo se compagina en una sola persona. Vender un viaje, medir un costo, escribir, rezar: <em>es la misma operación en cuatro lugares</em>. Hacer que algo que todavía no se ve, se vea.</p>
+          <h3 class="idea__name">Emprender es la forma más cara de estudiar, y la que más enseña</h3>
+          <p class="idea__what">Lo que estudio a la mañana lo pruebo a la tarde: en una cotización, en un costo mal medido, en una venta que se cae. Y lo que sale mal a la tarde me manda de vuelta a estudiar. De eso no me toma examen la facultad: <em>me lo toma el cliente</em>. Por eso no espero a estar listo para empezar algo. Empiezo, y me formo en el camino.</p>
         </li>
 
         <li class="idea">
           <span class="idea__num" aria-hidden="true">03</span>
-          <h3 class="idea__name">Pensar es un acto de rebeldía</h3>
-          <p class="idea__what">La idea es de Byung-Chul Han, en <em>La sociedad del cansancio</em>, y me movió más que ningún otro libro: vivimos en un mundo hiperactivo donde uno termina siendo víctima y verdugo de sí mismo. Leer —Han, Salinger, Orwell, Frankl— es lo que me saca de ahí un rato. No leo para tener una opinión lista: leo para poder discutir conmigo mismo.</p>
+          <h3 class="idea__name">Si no sé para qué, lo demás es ruido</h3>
+          <p class="idea__what">Creo en Dios. Voy a misa, estoy en la parroquia, y esa es la parte que no entra en ningún currículum, aunque sea la que sostiene todo el resto. Para qué estamos acá es una pregunta que a los 19 casi nadie se hace, y leer es lo que me obliga a volver a hacérmela: es el rato en que lo que rezo, lo que estudio y lo que vendo <em>vuelven a ser una sola cosa</em>. No leo para tener una opinión lista: leo para poder discutir conmigo mismo.</p>
         </li>
 
       </ul>
@@ -563,11 +560,11 @@ a{color:var(--accent-text)}
         </li>
         <li class="contact__row">
           <!-- [CONTACTO] Instagram -->
-          <a class="textlink" href="https://www.instagram.com/lautiialtamiranda/" target="_blank" rel="noopener noreferrer">Seguime en Instagram &rarr;</a>
+          <a class="btn btn--primary btn--wide" href="https://www.instagram.com/lautiialtamiranda/" target="_blank" rel="noopener noreferrer">Seguime en Instagram</a>
         </li>
         <li class="contact__row">
           <!-- [CONTACTO] LinkedIn -->
-          <a class="textlink" href="https://www.linkedin.com/in/lautaroaltamirandamastri/" target="_blank" rel="noopener noreferrer">Conectemos en LinkedIn &rarr;</a>
+          <a class="btn btn--primary btn--wide" href="https://www.linkedin.com/in/lautaroaltamirandamastri/" target="_blank" rel="noopener noreferrer">Conectemos en LinkedIn</a>
         </li>
       </ul>
     </div>

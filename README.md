@@ -71,6 +71,13 @@ está entre `>` y `</p>`:
 > ⚠️ Si cambiás la frase grande del hero o la descripción, acordate de cambiar también el
 > `<title>` y las etiquetas `og:` de arriba de todo, que son las que se ven cuando pegás el
 > link en WhatsApp.
+>
+> Y **regenerá `og.png`**: la frase grande no está escrita ahí como texto, está *pintada
+> dentro de la imagen*. Si no la rehacés, la página va a decir una cosa y la
+> previsualización de WhatsApp otra. Es una imagen de 1200×630 con el fondo crema, tu
+> nombre arriba en versalitas con el filete naranja, la frase en Instrument Serif (la
+> segunda línea en itálica naranja), el epígrafe con el marcador amarillo y el mismo
+> retrato que el hero, rotado y con marco blanco.
 
 ### Los datos de contacto
 
@@ -94,7 +101,7 @@ manteniendo el nombre:
 
 | Archivo | Qué es | Recorte |
 |---|---|---|
-| `retrato` | El retrato del hero | Vertical 2:3 (408×612) |
+| `retrato` | El retrato del hero | Vertical 2:3 (308×462) |
 | `parroquia` | El grupo de la parroquia | Vertical 3:4 (440×587) |
 | `costear-equipo` | Vos con dos socios de Costear | Vertical 3:4 (440×587) |
 | `emprende-u` | Presentando, con el sistema proyectado | Vertical 3:4 (440×587) |

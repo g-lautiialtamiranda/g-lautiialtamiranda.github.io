@@ -8,6 +8,9 @@ Mistakes already made. One line each: the rule, then why. Read before starting; 
 - Don't hide whole sections for scroll reveals — fast scrolling lands on blank screens. Reveal small pieces.
 - Don't cap a display headline with `max-width` in `ch` — it forced four lines; break lines explicitly.
 - `nth-child` counts among the element's own siblings — an only-child `figure` is always "odd".
+- Scroll-driven `color` animations repaint every frame — per-word lighting made phones stutter; keep it to `hover:hover`.
+- `:hover` sticks after a tap on phones — wrap hover styles in `@media (hover:hover)`.
+- `backdrop-filter` on a fixed bar stutters over scrolling photos on phones — solid background on `hover:none`.
 
 ## Color
 - Compute contrast, never eyeball it — `#C2410C` on white looked AA and measured 4.35.
@@ -19,6 +22,8 @@ Mistakes already made. One line each: the rule, then why. Read before starting; 
 - Don't leave dev servers running in the background — one was killed on low memory mid-review. Stop after verifying.
 - When screenshots time out (low memory), stop retrying — verify layout with JS measurements (sizes, overflow, broken images).
 - Re-read long generated JS before running it — an observer block came out garbled.
+- Don't run rAF scroll loops through `javascript_tool` — the renderer froze; measure static values instead.
+- An iframe can't emulate touch (`hover:none`) — touch-only rules need a real phone.
 
 ## Assets
 - Apply EXIF rotation, then strip metadata (GPS) before publishing phone photos. HEIC needs conversion first.

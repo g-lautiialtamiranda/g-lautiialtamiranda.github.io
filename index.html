@@ -96,13 +96,14 @@ body{
   font-size:1.0625rem;
   line-height:1.65;
   -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
+  overflow-x:clip;
 }
 @media (min-width:48rem){ body{font-size:1.125rem} }
 img{max-width:100%;height:auto;display:block}
 h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.02;letter-spacing:-.015em;margin:0}
 p{margin:0}
 a{color:var(--accent-text)}
+a,summary{-webkit-tap-highlight-color:transparent}
 :focus-visible{outline:2px solid var(--text);outline-offset:3px;border-radius:4px}
 section[id]{scroll-margin-top:4rem}
 
@@ -146,11 +147,13 @@ section[id]{scroll-margin-top:4rem}
   transition:transform .45s var(--ease), visibility 0s linear 0s;
 }
 .js .nav:not(.is-shown){transform:translateY(-100%);visibility:hidden;transition:transform .45s var(--ease), visibility 0s linear .45s}
+/* En teléfono, fondo sólido: el desenfoque sobre fotos en movimiento traba el scroll. */
+@media (hover:none){ .nav{background:rgba(255,255,255,.96);-webkit-backdrop-filter:none;backdrop-filter:none} }
 .nav__inner{display:flex;align-items:center;gap:1.5rem;height:3.5rem}
 .nav__name{font-weight:600;font-size:.95rem;color:var(--text);text-decoration:none;margin-right:auto;white-space:nowrap}
 .nav__links{display:none;gap:1.6rem;margin:0;padding:0;list-style:none}
 .nav__links a{color:var(--muted);text-decoration:none;font-size:.9rem}
-.nav__links a:hover{color:var(--text)}
+@media (hover:hover){ .nav__links a:hover{color:var(--text)} }
 @media (min-width:62rem){ .nav__links{display:flex} }
 .nav__cta{
   font-size:.85rem;font-weight:600;text-decoration:none;
@@ -158,7 +161,7 @@ section[id]{scroll-margin-top:4rem}
   padding:.5rem 1rem;border-radius:999px;white-space:nowrap;
   transition:background-color .2s ease;
 }
-.nav__cta:hover{background:var(--accent-text)}
+@media (hover:hover){ .nav__cta:hover{background:var(--accent-text)} }
 
 /* ══════════════════ 4. HERO ══════════════════ */
 .hero{padding-block:clamp(3.5rem,10vh,6rem) clamp(4rem,10vh,6rem)}
@@ -207,9 +210,13 @@ section[id]{scroll-margin-top:4rem}
   background:var(--text);color:var(--bg);
   transition:background-color .2s ease, transform .2s var(--ease);
 }
-.btn:hover{background:var(--accent-text);transform:translateY(-2px)}
 .btn__arrow{transition:transform .25s var(--ease)}
-.btn:hover .btn__arrow{transform:translateY(2px)}
+/* El hover solo con mouse: en teléfono queda "pegado" después de tocar. */
+@media (hover:hover){
+  .btn:hover{background:var(--accent-text);transform:translateY(-2px)}
+  .btn:hover .btn__arrow{transform:translateY(2px)}
+}
+.btn:active{transform:scale(.97)}
 
 /* ══════════════════ 6. QUIÉN SOY ══════════════════ */
 .about__body{margin-top:clamp(2rem,5vw,3rem);display:grid;gap:1.4rem;max-width:56rem}
@@ -217,7 +224,8 @@ section[id]{scroll-margin-top:4rem}
 
 /* EL TEXTO QUE SE ENCIENDE — el script (§5) parte estos párrafos en palabras
    y cada una pasa de gris a tinta a medida que sube por la pantalla. Solo pasa
-   si el navegador lo soporta y el visitante no pidió reducir movimiento; si no,
+   con mouse (en teléfono redibujar cada palabra traba el scroll), si el
+   navegador lo soporta y si el visitante no pidió reducir movimiento; si no,
    el texto se ve en tinta desde el principio. */
 @keyframes encender{from{color:var(--dim)}to{color:var(--text)}}
 .w{animation:encender linear both;animation-timeline:view();animation-range:entry 100% cover 42%}
@@ -348,8 +356,11 @@ section[id]{scroll-margin-top:4rem}
 }
 .canal__meta{grid-column:1;font-size:.9rem;word-break:break-word}
 .canal__arrow{grid-row:1 / span 2;grid-column:2;font-size:clamp(1.5rem,4vw,2.25rem);transition:transform .35s var(--ease)}
-.canal:hover .canal__name{background-size:100% 2px}
-.canal:hover .canal__arrow{transform:translateX(.35rem)}
+@media (hover:hover){
+  .canal:hover .canal__name{background-size:100% 2px}
+  .canal:hover .canal__arrow{transform:translateX(.35rem)}
+}
+.canal:active .canal__arrow{transform:translateX(.35rem)}
 
 /* ══════════════════ 11. PIE ══════════════════ */
 .footer{padding-block:2rem}
@@ -362,12 +373,17 @@ section[id]{scroll-margin-top:4rem}
    de entrada. */
 .js .reveal{opacity:0;transform:translateY(24px)}
 .js .reveal.is-visible{opacity:1;transform:none;transition:opacity .6s var(--ease), transform .6s var(--ease)}
+/* En teléfono, recorrido más corto y más rápido: al scrollear con el dedo se siente más liviano. */
+@media (max-width:61.99rem){
+  .js .reveal{transform:translateY(12px)}
+  .js .reveal.is-visible{transform:none;transition-duration:.45s}
+}
 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none !important;transition:none !important}
   .js .reveal{opacity:1 !important;transform:none !important}
-  .btn:hover,.canal:hover .canal__arrow{transform:none}
+  .btn:hover,.btn:active,.canal:hover .canal__arrow,.canal:active .canal__arrow{transform:none}
 }
 </style>
 </head>
@@ -466,12 +482,12 @@ section[id]{scroll-margin-top:4rem}
             <div class="lugar__fotos">
               <figure class="shot reveal">
                 <picture><source srcset="assets/img/parroquia.webp" type="image/webp">
-                <img src="assets/img/parroquia.jpg" alt="Lautaro con el grupo de la parroquia, de noche bajo una galería, alrededor de una imagen de la Virgen" width="440" height="587" loading="lazy"></picture>
+                <img src="assets/img/parroquia.jpg" alt="Lautaro con el grupo de la parroquia, de noche bajo una galería, alrededor de una imagen de la Virgen" width="440" height="587" loading="lazy" decoding="async"></picture>
                 <figcaption>En la parroquia, con el grupo de siempre.</figcaption>
               </figure>
               <figure class="shot reveal">
                 <picture><source srcset="assets/img/iglesia.webp" type="image/webp">
-                <img src="assets/img/iglesia.jpg" alt="Altar de una iglesia con la imagen de Jesús Misericordioso iluminada en el centro" width="720" height="960" loading="lazy"></picture>
+                <img src="assets/img/iglesia.jpg" alt="Altar de una iglesia con la imagen de Jesús Misericordioso iluminada en el centro" width="720" height="960" loading="lazy" decoding="async"></picture>
                 <figcaption>La parte que no entra en ningún currículum.</figcaption>
               </figure>
             </div>
@@ -482,12 +498,12 @@ section[id]{scroll-margin-top:4rem}
             <div class="lugar__fotos">
               <figure class="shot reveal">
                 <picture><source srcset="assets/img/oficina-alan.webp" type="image/webp">
-                <img src="assets/img/oficina-alan.jpg" alt="Lautaro y Alan frente a un ventanal, mirando Costear en la notebook" width="720" height="960" loading="lazy"></picture>
+                <img src="assets/img/oficina-alan.jpg" alt="Lautaro y Alan frente a un ventanal, mirando Costear en la notebook" width="720" height="960" loading="lazy" decoding="async"></picture>
                 <figcaption>Con Alan, en la oficina de Costear.</figcaption>
               </figure>
               <figure class="shot reveal">
                 <picture><source srcset="assets/img/mareterra-playa.webp" type="image/webp">
-                <img src="assets/img/mareterra-playa.jpg" alt="Lautaro con la remera de Mareterra frente a una playa de agua turquesa" width="440" height="587" loading="lazy"></picture>
+                <img src="assets/img/mareterra-playa.jpg" alt="Lautaro con la remera de Mareterra frente a una playa de agua turquesa" width="440" height="587" loading="lazy" decoding="async"></picture>
                 <figcaption>Grabando para la agencia. Vender un viaje es saber contarlo.</figcaption>
               </figure>
             </div>
@@ -498,12 +514,12 @@ section[id]{scroll-margin-top:4rem}
             <div class="lugar__fotos">
               <figure class="shot reveal">
                 <picture><source srcset="assets/img/facultad-clase.webp" type="image/webp">
-                <img src="assets/img/facultad-clase.jpg" alt="Un aula magna de la Universidad Nacional de Tucumán llena de estudiantes durante una clase" width="720" height="960" loading="lazy"></picture>
+                <img src="assets/img/facultad-clase.jpg" alt="Un aula magna de la Universidad Nacional de Tucumán llena de estudiantes durante una clase" width="720" height="960" loading="lazy" decoding="async"></picture>
                 <figcaption>Lo que veo a la mañana lo uso a la tarde.</figcaption>
               </figure>
               <figure class="shot reveal">
                 <picture><source srcset="assets/img/emprende-u-unt.webp" type="image/webp">
-                <img src="assets/img/emprende-u-unt.jpg" alt="Lautaro con tres compañeros del equipo de Costear, con las credenciales de Emprende U, en la UNT" width="720" height="960" loading="lazy"></picture>
+                <img src="assets/img/emprende-u-unt.jpg" alt="Lautaro con tres compañeros del equipo de Costear, con las credenciales de Emprende U, en la UNT" width="720" height="960" loading="lazy" decoding="async"></picture>
                 <figcaption>Emprende U, en la UNT. Nada de esto lo armé solo.</figcaption>
               </figure>
             </div>
@@ -515,7 +531,7 @@ section[id]{scroll-margin-top:4rem}
             <div class="lugar__fotos">
               <figure class="shot shot--wide reveal">
                 <picture><source srcset="assets/img/familia.webp" type="image/webp">
-                <img src="assets/img/familia.jpg" alt="Lautaro con su familia alrededor de una mesa larga, en una selfie grupal" width="1200" height="900" loading="lazy"></picture>
+                <img src="assets/img/familia.jpg" alt="Lautaro con su familia alrededor de una mesa larga, en una selfie grupal" width="1200" height="900" loading="lazy" decoding="async"></picture>
                 <figcaption>Mi vida personal: la que sostiene las otras tres.</figcaption>
               </figure>
             </div>
@@ -536,7 +552,7 @@ section[id]{scroll-margin-top:4rem}
         <article class="tile reveal">
           <figure class="tile__media">
             <picture><source srcset="assets/img/costear-equipo.webp" type="image/webp">
-            <img src="assets/img/costear-equipo.jpg" alt="Lautaro de camisa blanca junto a dos socios de Costear, contra una pared de piedra" width="440" height="587" loading="lazy"></picture>
+            <img src="assets/img/costear-equipo.jpg" alt="Lautaro de camisa blanca junto a dos socios de Costear, contra una pared de piedra" width="440" height="587" loading="lazy" decoding="async"></picture>
           </figure>
           <div class="tile__body">
             <p class="tile__role">Cofundador</p>
@@ -552,18 +568,18 @@ section[id]{scroll-margin-top:4rem}
                 <ol class="recorrido">
                   <li>
                     <picture><source srcset="assets/img/emprende-u.webp" type="image/webp">
-                    <img src="assets/img/emprende-u.jpg" alt="Lautaro presentando Costear en un aula, con el sistema de costos proyectado en la pantalla" width="440" height="587" loading="lazy"></picture>
+                    <img src="assets/img/emprende-u.jpg" alt="Lautaro presentando Costear en un aula, con el sistema de costos proyectado en la pantalla" width="440" height="587" loading="lazy" decoding="async"></picture>
                     <p><strong>Emprende U.</strong> Semifinal y mención especial.</p>
                   </li>
                   <li>
                     <picture><source srcset="assets/img/expocon.webp" type="image/webp">
-                    <img src="assets/img/expocon.jpg" alt="Lautaro con sus padres en el stand de Costear en EXPOCON" width="440" height="587" loading="lazy"></picture>
+                    <img src="assets/img/expocon.jpg" alt="Lautaro con sus padres en el stand de Costear en EXPOCON" width="440" height="587" loading="lazy" decoding="async"></picture>
                     <p><strong>EXPOCON.</strong> Stand propio. Mis viejos vinieron a ver en qué andaba.</p>
                   </li>
                 </ol>
                 <figure class="press">
                   <picture><source srcset="assets/img/costear-gaceta.webp" type="image/webp">
-                  <img src="assets/img/costear-gaceta.jpg" alt="Recorte de La Gaceta: la plataforma usa inteligencia artificial para leer comprobantes, facturas o imágenes, extraer datos y alimentar un sistema de costos en tiempo real, para reducir la carga manual en pymes y consultores." width="880" height="239" loading="lazy"></picture>
+                  <img src="assets/img/costear-gaceta.jpg" alt="Recorte de La Gaceta: la plataforma usa inteligencia artificial para leer comprobantes, facturas o imágenes, extraer datos y alimentar un sistema de costos en tiempo real, para reducir la carga manual en pymes y consultores." width="880" height="239" loading="lazy" decoding="async"></picture>
                   <figcaption>La Gaceta, sección de gestión empresarial.</figcaption>
                 </figure>
               </div>
@@ -574,7 +590,7 @@ section[id]{scroll-margin-top:4rem}
         <article class="tile reveal">
           <figure class="tile__media">
             <picture><source srcset="assets/img/mareterra-atardecer.webp" type="image/webp">
-            <img src="assets/img/mareterra-atardecer.jpg" alt="Lautaro de espaldas, filmando con el teléfono el sol que baja sobre el mar" width="440" height="587" loading="lazy"></picture>
+            <img src="assets/img/mareterra-atardecer.jpg" alt="Lautaro de espaldas, filmando con el teléfono el sol que baja sobre el mar" width="440" height="587" loading="lazy" decoding="async"></picture>
           </figure>
           <div class="tile__body">
             <!-- Si preferís algo más literal que "Cofundador", acá entra
@@ -741,7 +757,7 @@ section[id]{scroll-margin-top:4rem}
           observador.unobserve(entrada.target);
         }
       });
-    }, { rootMargin: '0px 0px -6% 0px', threshold: 0 });
+    }, { rootMargin: '0px 0px 8% 0px', threshold: 0 });
     piezas.forEach(function (el) { observador.observe(el); });
   }
 
@@ -749,7 +765,8 @@ section[id]{scroll-margin-top:4rem}
      Parte los párrafos .encender en palabras (sin tocar los <span> que ya
      tengan adentro, como el marcador amarillo). El color lo anima el CSS. */
   var soportaScroll = window.CSS && CSS.supports && CSS.supports('animation-timeline: view()');
-  if (soportaScroll && !quieto.matches) {
+  var conMouse = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (soportaScroll && conMouse && !quieto.matches) {
     document.querySelectorAll('.encender').forEach(function (parrafo) {
       var textos = [];
       var recorrido = document.createTreeWalker(parrafo, NodeFilter.SHOW_TEXT);

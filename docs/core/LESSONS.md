@@ -22,7 +22,7 @@ Mistakes already made. One line each: the rule, then why. Read before starting; 
 - Don't leave dev servers running in the background — one was killed on low memory mid-review. Stop after verifying.
 - When screenshots time out (low memory), stop retrying — verify layout with JS measurements (sizes, overflow, broken images).
 - Re-read long generated JS before running it — an observer block came out garbled.
-- Don't run rAF scroll loops through `javascript_tool` — the renderer froze; measure static values instead.
+- The automation tab is `visibilityState: hidden`, so `requestAnimationFrame` never fires — rAF loops froze the renderer and smooth scroll can't be watched there; measure static values, feel motion on a real screen.
 - An iframe can't emulate touch (`hover:none`) — touch-only rules need a real phone.
 
 ## Assets

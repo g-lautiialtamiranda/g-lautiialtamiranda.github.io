@@ -16,3 +16,4 @@ Ideas that would add beauty or polish to the landing. One line each. Add on ever
 - [x] Light, vivid redesign; removed template effects (blob, tilt, typewriter). — 2026-09-14
 - [x] Real photos for every place; family photo as "En casa". — 2026-09-14
 - [x] Smoother phones: no per-word lighting or nav blur on touch, hover only with mouse, earlier/shorter reveals. — 2026-09-14
+- [x] Slower, gliding wheel scroll on desktop (Lenis, mouse only) so effects get seen. — 2026-09-14

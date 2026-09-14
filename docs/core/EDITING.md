@@ -1,7 +1,9 @@
 # Guía para editar la página
 
 Todo el sitio vive en `index.html` (texto, estilos y el poco JavaScript que hay). Las fotos
-están en `assets/img/`. No hay framework, build ni dependencias.
+están en `assets/img/`. No hay framework ni build. La única dependencia es Lenis (scroll suave
+con mouse), que se baja de jsdelivr: si falla, la página scrollea normal. La velocidad se ajusta
+en el script, sección 7 (`wheelMultiplier` y `lerp`).
 
 ## Verla en tu compu
 
